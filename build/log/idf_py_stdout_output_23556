@@ -1,0 +1,329 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 188777542, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (32) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (32) boot: compile time Oct 10 2024 14:47:00[0m
+[0;32mI (32) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v1.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (45) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (54) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (63) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (93) boot: End of partition table[0m
+[0;32mI (97) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=265dch (157148) map[0m
+[0;32mI (159) esp_image: segment 1: paddr=00036604 vaddr=3ffb0000 size=0404ch ( 16460) load[0m
+[0;32mI (166) esp_image: segment 2: paddr=0003a658 vaddr=40080000 size=059c0h ( 22976) load[0m
+[0;32mI (175) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a40ach (671916) map[0m
+[0;32mI (405) esp_image: segment 4: paddr=000e40d4 vaddr=400859c0 size=131c0h ( 78272) load[0m
+[0;32mI (449) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (449) boot: Disabling RNG early entropy source...[0m
+[0;32mI (461) cpu_start: Multicore app[0m
+[0;32mI (469) cpu_start: Pro cpu start user code[0m
+[0;32mI (469) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (469) app_init: Application information:[0m
+[0;32mI (472) app_init: Project name:     HealthST[0m
+[0;32mI (477) app_init: App version:      1[0m
+[0;32mI (482) app_init: Compile time:     Oct 13 2024 18:45:14[0m
+[0;32mI (488) app_init: ELF file SHA256:  f63a2f4a3...[0m
+[0;32mI (493) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (498) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (503) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (508) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (513) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (520) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (526) heap_init: At 3FFB8898 len 00027768 (157 KiB): DRAM[0m
+[0;32mI (532) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (539) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (545) heap_init: At 40098B80 len 00007480 (29 KiB): IRAM[0m
+[0;32mI (553) spi_flash: detected chip: gd[0m
+[0;32mI (555) spi_flash: flash io: dio[0m
+[0;33mW (559) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (573) main_task: Started on CPU0[0m
+[0;32mI (583) main_task: Calling app_main()[0m
+I (613) wifi:wifi driver task: 3ffc08e8, prio:23, stack:6656, core=0
+I (623) wifi:wifi firmware version: ccaebfa
+I (623) wifi:wifi certification version: v7.0
+I (623) wifi:config NVS flash: enabled
+I (623) wifi:config nano formating: disabled
+I (623) wifi:Init data frame dynamic rx buffer num: 32
+I (633) wifi:Init static rx mgmt buffer num: 5
+I (633) wifi:Init management short buffer num: 32
+I (643) wifi:Init dynamic tx buffer num: 32
+I (643) wifi:Init static rx buffer size: 1600
+I (653) wifi:Init static rx buffer num: 10
+I (653) wifi:Init dynamic rx buffer num: 32
+[0;32mI (653) wifi_init: rx ba win: 6[0m
+[0;32mI (663) wifi_init: accept mbox: 6[0m
+[0;32mI (663) wifi_init: tcpip mbox: 32[0m
+[0;32mI (663) wifi_init: udp mbox: 6[0m
+[0;32mI (673) wifi_init: tcp mbox: 6[0m
+[0;32mI (673) wifi_init: tcp tx win: 5760[0m
+[0;32mI (683) wifi_init: tcp rx win: 5760[0m
+[0;32mI (683) wifi_init: tcp mss: 1440[0m
+[0;32mI (683) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (693) wifi_init: WiFi RX IRAM OP enabled[0m
+W (693) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2
+[0;32mI (703) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+I (783) wifi:mode : sta (e8:6b:ea:09:d5:24)
+I (783) wifi:enable tsf
+[0;31mE (803) esp-tls: couldn't get hostname for :demo.thingsboard.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (803) transport_base: Failed to open a new connection: 32769[0m
+I (803) wifi:[0;31mE (803) mqtt_client: Error transport connect[0m
+new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1, snd_ch_cfg:0x0
+[0;32mI (813) ThingsBoard: Disconnected from ThingsBoard[0m
+I (823) wifi:state: init -> auth (0xb0)[0;32mI (813) ThingsBoard: LoRa initialized successfully.[0m
+
+[0;32mI (803) main_task: Returned from app_main()[0m
+I (853) wifi:state: auth -> assoc (0x0)
+I (873) wifi:state: assoc -> run (0x10)
+I (883) wifi:connected with Việt Anh, aid = 4, channel 11, 40D, bssid = 04:95:e6:6a:e9:30
+I (883) wifi:security: WPA2-PSK, phy: bgn, rssi: -18
+I (893) wifi:pm start, type: 1
+
+I (893) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (903) wifi:<ba-add>idx:0 (ifx:0, 04:95:e6:6a:e9:30), tid:0, ssn:2, winSize:64
+I (983) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (3903) esp_netif_handlers: sta ip: 192.168.2.103, mask: 255.255.255.0, gw: 192.168.2.1[0m
+[0;32mI (11433) ThingsBoard: Connected to ThingsBoard[0m
+[0;32mI (28833) ThingsBoard: Received data: ID: NODE_1, Temp: 27.61, HR: 110.09, SpO2: 0.00[0m
+[0;32mI (28833) ThingsBoard: RSSI: -36, SNR: 9.75[0m
+[0;32mI (28833) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.61 C, Heart Rate: 110.09 bpm, SpO2: 0.00%[0m
+[0;32mI (28853) ThingsBoard: Data sent successfully, msg_id=61833, payload={"node_id":"NODE_1","temperature":27.61,"heart_rate":110.09,"spo2":0.00}[0m
+[0;32mI (58863) ThingsBoard: Received data: ID: NODE_1, Temp: 27.95, HR: 106.13, SpO2: 0.00[0m
+[0;32mI (58863) ThingsBoard: RSSI: -35, SNR: 9.50[0m
+[0;32mI (58863) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.95 C, Heart Rate: 106.13 bpm, SpO2: 0.00%[0m
+[0;32mI (58883) ThingsBoard: Data sent successfully, msg_id=30033, payload={"node_id":"NODE_1","temperature":27.95,"heart_rate":106.13,"spo2":0.00}[0m
+[0;32mI (88883) ThingsBoard: Received data: ID: NODE_1, Temp: 27.91, HR: 102.38, SpO2: 0.00[0m
+[0;32mI (88883) ThingsBoard: RSSI: -41, SNR: 9.50[0m
+[0;32mI (88883) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.91 C, Heart Rate: 102.38 bpm, SpO2: 0.00%[0m
+[0;32mI (88903) ThingsBoard: Data sent successfully, msg_id=42920, payload={"node_id":"NODE_1","temperature":27.91,"heart_rate":102.38,"spo2":0.00}[0m
+[0;32mI (117903) ThingsBoard: Received data: ID: NODE_1, Temp: 27.79, HR: 99.70, SpO2: 0.00[0m
+[0;32mI (117903) ThingsBoard: RSSI: -39, SNR: 10.00[0m
+[0;32mI (117903) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.79 C, Heart Rate: 99.70 bpm, SpO2: 0.00%[0m
+[0;32mI (117923) ThingsBoard: Data sent successfully, msg_id=13471, payload={"node_id":"NODE_1","temperature":27.79,"heart_rate":99.70,"spo2":0.00}[0m
+[0;32mI (148923) ThingsBoard: Received data: ID: NODE_1, Temp: 27.81, HR: 97.02, SpO2: 0.00[0m
+[0;32mI (148923) ThingsBoard: RSSI: -26, SNR: 10.00[0m
+[0;32mI (148923) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.81 C, Heart Rate: 97.02 bpm, SpO2: 0.00%[0m
+[0;32mI (148943) ThingsBoard: Data sent successfully, msg_id=52561, payload={"node_id":"NODE_1","temperature":27.81,"heart_rate":97.02,"spo2":0.00}[0m
+[0;32mI (178943) ThingsBoard: Received data: ID: NODE_1, Temp: 33.91, HR: 87.75, SpO2: 96.00[0m
+[0;32mI (178943) ThingsBoard: RSSI: -28, SNR: 9.75[0m
+[0;32mI (178943) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 33.91 C, Heart Rate: 87.75 bpm, SpO2: 96.00%[0m
+[0;32mI (178963) ThingsBoard: Data sent successfully, msg_id=40123, payload={"node_id":"NODE_1","temperature":33.91,"heart_rate":87.75,"spo2":96.00}[0m
+[0;32mI (208963) ThingsBoard: Received data: ID: NODE_1, Temp: 33.07, HR: 93.73, SpO2: 96.00[0m
+[0;32mI (208963) ThingsBoard: RSSI: -33, SNR: 9.50[0m
+[0;32mI (208963) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 33.07 C, Heart Rate: 93.73 bpm, SpO2: 96.00%[0m
+[0;32mI (208983) ThingsBoard: Data sent successfully, msg_id=39276, payload={"node_id":"NODE_1","temperature":33.07,"heart_rate":93.73,"spo2":96.00}[0m
+[0;32mI (218993) ThingsBoard: Received data: ID: NODE_1, Temp: 33.11, HR: 93.73, SpO2: 96.00[0m
+[0;32mI (218993) ThingsBoard: RSSI: -28, SNR: 9.75[0m
+[0;32mI (218993) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 33.11 C, Heart Rate: 93.73 bpm, SpO2: 96.00%[0m
+[0;32mI (219013) ThingsBoard: Data sent successfully, msg_id=20069, payload={"node_id":"NODE_1","temperature":33.11,"heart_rate":93.73,"spo2":96.00}[0m
+[0;32mI (275013) ThingsBoard: Received data: ID: NODE_1, Temp: 27.55, HR: 120.65, SpO2: 0.00[0m
+[0;32mI (275013) ThingsBoard: RSSI: -36, SNR: 9.75[0m
+[0;32mI (275013) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.55 C, Heart Rate: 120.65 bpm, SpO2: 0.00%[0m
+[0;32mI (275033) ThingsBoard: Data sent successfully, msg_id=53784, payload={"node_id":"NODE_1","temperature":27.55,"heart_rate":120.65,"spo2":0.00}[0m
+[0;32mI (305033) ThingsBoard: Received data: ID: NODE_1, Temp: 27.99, HR: 129.59, SpO2: 0.00[0m
+[0;32mI (305033) ThingsBoard: RSSI: -42, SNR: 9.50[0m
+[0;32mI (305033) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.99 C, Heart Rate: 129.59 bpm, SpO2: 0.00%[0m
+[0;32mI (305053) ThingsBoard: Data sent successfully, msg_id=14212, payload={"node_id":"NODE_1","temperature":27.99,"heart_rate":129.59,"spo2":0.00}[0m
+[0;32mI (335053) ThingsBoard: Received data: ID: NODE_1, Temp: 28.05, HR: 127.71, SpO2: 0.00[0m
+[0;32mI (335053) ThingsBoard: RSSI: -39, SNR: 12.00[0m
+[0;32mI (335053) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 28.05 C, Heart Rate: 127.71 bpm, SpO2: 0.00%[0m
+[0;32mI (335073) ThingsBoard: Data sent successfully, msg_id=63263, payload={"node_id":"NODE_1","temperature":28.05,"heart_rate":127.71,"spo2":0.00}[0m
+[0;32mI (365073) ThingsBoard: Received data: ID: NODE_1, Temp: 27.81, HR: 119.04, SpO2: 0.00[0m
+[0;32mI (365073) ThingsBoard: RSSI: -36, SNR: 9.50[0m
+[0;32mI (365073) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.81 C, Heart Rate: 119.04 bpm, SpO2: 0.00%[0m
+[0;32mI (365093) ThingsBoard: Data sent successfully, msg_id=5994, payload={"node_id":"NODE_1","temperature":27.81,"heart_rate":119.04,"spo2":0.00}[0m
+[0;32mI (395093) ThingsBoard: Received data: ID: NODE_1, Temp: 28.17, HR: 110.30, SpO2: 0.00[0m
+[0;32mI (395093) ThingsBoard: RSSI: -35, SNR: 9.50[0m
+[0;32mI (395093) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 28.17 C, Heart Rate: 110.30 bpm, SpO2: 0.00%[0m
+[0;32mI (395113) ThingsBoard: Data sent successfully, msg_id=20896, payload={"node_id":"NODE_1","temperature":28.17,"heart_rate":110.30,"spo2":0.00}[0m
+[0;32mI (425113) ThingsBoard: Received data: ID: NODE_1, Temp: 28.01, HR: 103.54, SpO2: 0.00[0m
+[0;32mI (425113) ThingsBoard: RSSI: -35, SNR: 9.50[0m
+[0;32mI (425113) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 28.01 C, Heart Rate: 103.54 bpm, SpO2: 0.00%[0m
+[0;32mI (425133) ThingsBoard: Data sent successfully, msg_id=59888, payload={"node_id":"NODE_1","temperature":28.01,"heart_rate":103.54,"spo2":0.00}[0m
+[0;32mI (455133) ThingsBoard: Received data: ID: NODE_1, Temp: 28.07, HR: 101.15, SpO2: 0.00[0m
+[0;32mI (455133) ThingsBoard: RSSI: -36, SNR: 9.75[0m
+[0;32mI (455133) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 28.07 C, Heart Rate: 101.15 bpm, SpO2: 0.00%[0m
+[0;32mI (455153) ThingsBoard: Data sent successfully, msg_id=50475, payload={"node_id":"NODE_1","temperature":28.07,"heart_rate":101.15,"spo2":0.00}[0m
+[0;32mI (485163) ThingsBoard: Received data: ID: NODE_1, Temp: 27.93, HR: 100.78, SpO2: 0.00[0m
+[0;32mI (485163) ThingsBoard: RSSI: -38, SNR: 9.25[0m
+[0;32mI (485163) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.93 C, Heart Rate: 100.78 bpm, SpO2: 0.00%[0m
+[0;32mI (485183) ThingsBoard: Data sent successfully, msg_id=21404, payload={"node_id":"NODE_1","temperature":27.93,"heart_rate":100.78,"spo2":0.00}[0m
+[0;32mI (516183) ThingsBoard: Received data: ID: NODE_1, Temp: 27.85, HR: 99.11, SpO2: 0.00[0m
+[0;32mI (516183) ThingsBoard: RSSI: -33, SNR: 9.75[0m
+[0;32mI (516183) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.85 C, Heart Rate: 99.11 bpm, SpO2: 0.00%[0m
+[0;32mI (516203) ThingsBoard: Data sent successfully, msg_id=337, payload={"node_id":"NODE_1","temperature":27.85,"heart_rate":99.11,"spo2":0.00}[0m
+[0;32mI (546203) ThingsBoard: Received data: ID: NODE_1, Temp: 27.85, HR: 99.36, SpO2: 0.00[0m
+[0;32mI (546203) ThingsBoard: RSSI: -32, SNR: 10.75[0m
+[0;32mI (546203) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.85 C, Heart Rate: 99.36 bpm, SpO2: 0.00%[0m
+[0;32mI (546223) ThingsBoard: Data sent successfully, msg_id=43691, payload={"node_id":"NODE_1","temperature":27.85,"heart_rate":99.36,"spo2":0.00}[0m
+[0;32mI (576223) ThingsBoard: Received data: ID: NODE_1, Temp: 27.87, HR: 99.86, SpO2: 0.00[0m
+[0;32mI (576223) ThingsBoard: RSSI: -41, SNR: 9.50[0m
+[0;32mI (576223) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.87 C, Heart Rate: 99.86 bpm, SpO2: 0.00%[0m
+[0;32mI (576243) ThingsBoard: Data sent successfully, msg_id=32468, payload={"node_id":"NODE_1","temperature":27.87,"heart_rate":99.86,"spo2":0.00}[0m
+[0;32mI (606243) ThingsBoard: Received data: ID: NODE_1, Temp: 27.91, HR: 101.42, SpO2: 0.00[0m
+[0;32mI (606243) ThingsBoard: RSSI: -42, SNR: 9.00[0m
+[0;32mI (606243) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.91 C, Heart Rate: 101.42 bpm, SpO2: 0.00%[0m
+[0;32mI (606263) ThingsBoard: Data sent successfully, msg_id=20644, payload={"node_id":"NODE_1","temperature":27.91,"heart_rate":101.42,"spo2":0.00}[0m
+[0;32mI (636263) ThingsBoard: Received data: ID: NODE_1, Temp: 27.99, HR: 102.54, SpO2: 0.00[0m
+[0;32mI (636263) ThingsBoard: RSSI: -33, SNR: 9.00[0m
+[0;32mI (636263) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.99 C, Heart Rate: 102.54 bpm, SpO2: 0.00%[0m
+[0;32mI (636283) ThingsBoard: Data sent successfully, msg_id=43499, payload={"node_id":"NODE_1","temperature":27.99,"heart_rate":102.54,"spo2":0.00}[0m
+[0;32mI (666283) ThingsBoard: Received data: ID: NODE_1, Temp: 27.75, HR: 103.49, SpO2: 0.00[0m
+[0;32mI (666283) ThingsBoard: RSSI: -41, SNR: 9.50[0m
+[0;32mI (666283) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.75 C, Heart Rate: 103.49 bpm, SpO2: 0.00%[0m
+[0;32mI (666303) ThingsBoard: Data sent successfully, msg_id=7855, payload={"node_id":"NODE_1","temperature":27.75,"heart_rate":103.49,"spo2":0.00}[0m
+[0;32mI (696313) ThingsBoard: Received data: ID: NODE_1, Temp: 27.79, HR: 104.15, SpO2: 0.00[0m
+[0;32mI (696313) ThingsBoard: RSSI: -44, SNR: 8.00[0m
+[0;32mI (696313) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.79 C, Heart Rate: 104.15 bpm, SpO2: 0.00%[0m
+[0;32mI (696333) ThingsBoard: Data sent successfully, msg_id=20286, payload={"node_id":"NODE_1","temperature":27.79,"heart_rate":104.15,"spo2":0.00}[0m
+[0;32mI (726333) ThingsBoard: Received data: ID: NODE_1, Temp: 27.73, HR: 101.55, SpO2: 0.00[0m
+[0;32mI (726333) ThingsBoard: RSSI: -41, SNR: 9.25[0m
+[0;32mI (726333) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.73 C, Heart Rate: 101.55 bpm, SpO2: 0.00%[0m
+[0;32mI (726353) ThingsBoard: Data sent successfully, msg_id=22785, payload={"node_id":"NODE_1","temperature":27.73,"heart_rate":101.55,"spo2":0.00}[0m
+[0;32mI (756353) ThingsBoard: Received data: ID: NODE_1, Temp: 27.59, HR: 98.88, SpO2: 0.00[0m
+[0;32mI (756353) ThingsBoard: RSSI: -36, SNR: 10.00[0m
+[0;32mI (756353) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.59 C, Heart Rate: 98.88 bpm, SpO2: 0.00%[0m
+[0;32mI (756373) ThingsBoard: Data sent successfully, msg_id=28712, payload={"node_id":"NODE_1","temperature":27.59,"heart_rate":98.88,"spo2":0.00}[0m
+[0;32mI (786373) ThingsBoard: Received data: ID: NODE_1, Temp: 28.01, HR: 96.00, SpO2: 0.00[0m
+[0;32mI (786373) ThingsBoard: RSSI: -27, SNR: 9.75[0m
+[0;32mI (786373) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 28.01 C, Heart Rate: 96.00 bpm, SpO2: 0.00%[0m
+[0;32mI (786393) ThingsBoard: Data sent successfully, msg_id=52510, payload={"node_id":"NODE_1","temperature":28.01,"heart_rate":96.00,"spo2":0.00}[0m
+[0;32mI (816393) ThingsBoard: Received data: ID: NODE_1, Temp: 27.73, HR: 100.12, SpO2: 0.00[0m
+[0;32mI (816393) ThingsBoard: RSSI: -29, SNR: 9.75[0m
+[0;32mI (816393) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.73 C, Heart Rate: 100.12 bpm, SpO2: 0.00%[0m
+[0;32mI (816403) ThingsBoard: Data sent successfully, msg_id=27832, payload={"node_id":"NODE_1","temperature":27.73,"heart_rate":100.12,"spo2":0.00}[0m
+[0;32mI (847413) ThingsBoard: Received data: ID: NODE_1, Temp: 27.67, HR: 103.22, SpO2: 0.00[0m
+[0;32mI (847413) ThingsBoard: RSSI: -29, SNR: 9.50[0m
+[0;32mI (847413) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.67 C, Heart Rate: 103.22 bpm, SpO2: 0.00%[0m
+[0;32mI (847433) ThingsBoard: Data sent successfully, msg_id=11600, payload={"node_id":"NODE_1","temperature":27.67,"heart_rate":103.22,"spo2":0.00}[0m
+[0;32mI (877433) ThingsBoard: Received data: ID: NODE_1, Temp: 27.93, HR: 103.39, SpO2: 0.00[0m
+[0;32mI (877433) ThingsBoard: RSSI: -33, SNR: 8.75[0m
+[0;32mI (877433) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.93 C, Heart Rate: 103.39 bpm, SpO2: 0.00%[0m
+[0;32mI (877453) ThingsBoard: Data sent successfully, msg_id=11263, payload={"node_id":"NODE_1","temperature":27.93,"heart_rate":103.39,"spo2":0.00}[0m
+[0;32mI (907463) ThingsBoard: Received data: ID: NODE_1, Temp: 27.75, HR: 101.17, SpO2: 0.00[0m
+[0;32mI (907463) ThingsBoard: RSSI: -34, SNR: 9.75[0m
+[0;32mI (907463) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.75 C, Heart Rate: 101.17 bpm, SpO2: 0.00%[0m
+[0;32mI (907483) ThingsBoard: Data sent successfully, msg_id=65014, payload={"node_id":"NODE_1","temperature":27.75,"heart_rate":101.17,"spo2":0.00}[0m
+[0;32mI (937483) ThingsBoard: Received data: ID: NODE_1, Temp: 27.67, HR: 100.30, SpO2: 0.00[0m
+[0;32mI (937483) ThingsBoard: RSSI: -31, SNR: 9.75[0m
+[0;32mI (937483) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.67 C, Heart Rate: 100.30 bpm, SpO2: 0.00%[0m
+[0;32mI (937503) ThingsBoard: Data sent successfully, msg_id=49900, payload={"node_id":"NODE_1","temperature":27.67,"heart_rate":100.30,"spo2":0.00}[0m
+[0;32mI (967503) ThingsBoard: Received data: ID: NODE_1, Temp: 27.91, HR: 99.63, SpO2: 0.00[0m
+[0;32mI (967503) ThingsBoard: RSSI: -31, SNR: 10.00[0m
+[0;32mI (967503) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.91 C, Heart Rate: 99.63 bpm, SpO2: 0.00%[0m
+[0;32mI (967523) ThingsBoard: Data sent successfully, msg_id=1165, payload={"node_id":"NODE_1","temperature":27.91,"heart_rate":99.63,"spo2":0.00}[0m
+[0;32mI (997523) ThingsBoard: Received data: ID: NODE_1, Temp: 27.85, HR: 100.45, SpO2: 0.00[0m
+[0;32mI (997523) ThingsBoard: RSSI: -28, SNR: 10.25[0m
+[0;32mI (997523) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.85 C, Heart Rate: 100.45 bpm, SpO2: 0.00%[0m
+[0;32mI (997543) ThingsBoard: Data sent successfully, msg_id=38640, payload={"node_id":"NODE_1","temperature":27.85,"heart_rate":100.45,"spo2":0.00}[0m
+[0;32mI (1027543) ThingsBoard: Received data: ID: NODE_1, Temp: 27.99, HR: 99.68, SpO2: 0.00[0m
+[0;32mI (1027543) ThingsBoard: RSSI: -30, SNR: 10.00[0m
+[0;32mI (1027543) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.99 C, Heart Rate: 99.68 bpm, SpO2: 0.00%[0m
+[0;32mI (1027553) ThingsBoard: Data sent successfully, msg_id=40048, payload={"node_id":"NODE_1","temperature":27.99,"heart_rate":99.68,"spo2":0.00}[0m
+[0;32mI (1057563) ThingsBoard: Received data: ID: NODE_1, Temp: 27.91, HR: 99.78, SpO2: 0.00[0m
+[0;32mI (1057563) ThingsBoard: RSSI: -31, SNR: 10.00[0m
+[0;32mI (1057563) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.91 C, Heart Rate: 99.78 bpm, SpO2: 0.00%[0m
+[0;32mI (1057583) ThingsBoard: Data sent successfully, msg_id=45063, payload={"node_id":"NODE_1","temperature":27.91,"heart_rate":99.78,"spo2":0.00}[0m
+[0;32mI (1087583) ThingsBoard: Received data: ID: NODE_1, Temp: 27.95, HR: 99.46, SpO2: 0.00[0m
+[0;32mI (1087583) ThingsBoard: RSSI: -32, SNR: 10.00[0m
+[0;32mI (1087583) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.95 C, Heart Rate: 99.46 bpm, SpO2: 0.00%[0m
+[0;32mI (1087603) ThingsBoard: Data sent successfully, msg_id=36127, payload={"node_id":"NODE_1","temperature":27.95,"heart_rate":99.46,"spo2":0.00}[0m
+[0;32mI (1117603) ThingsBoard: Received data: ID: NODE_1, Temp: 27.87, HR: 100.14, SpO2: 0.00[0m
+[0;32mI (1117603) ThingsBoard: RSSI: -31, SNR: 10.00[0m
+[0;32mI (1117603) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.87 C, Heart Rate: 100.14 bpm, SpO2: 0.00%[0m
+[0;32mI (1117623) ThingsBoard: Data sent successfully, msg_id=20736, payload={"node_id":"NODE_1","temperature":27.87,"heart_rate":100.14,"spo2":0.00}[0m
+[0;32mI (1147633) ThingsBoard: Received data: ID: NODE_1, Temp: 27.95, HR: 100.69, SpO2: 0.00[0m
+[0;32mI (1147633) ThingsBoard: RSSI: -29, SNR: 10.00[0m
+[0;32mI (1147633) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.95 C, Heart Rate: 100.69 bpm, SpO2: 0.00%[0m
+[0;32mI (1147653) ThingsBoard: Data sent successfully, msg_id=15847, payload={"node_id":"NODE_1","temperature":27.95,"heart_rate":100.69,"spo2":0.00}[0m
+[0;32mI (1177663) ThingsBoard: Received data: ID: NODE_1, Temp: 27.81, HR: 100.81, SpO2: 0.00[0m
+[0;32mI (1177663) ThingsBoard: RSSI: -30, SNR: 9.50[0m
+[0;32mI (1177663) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.81 C, Heart Rate: 100.81 bpm, SpO2: 0.00%[0m
+[0;32mI (1177683) ThingsBoard: Data sent successfully, msg_id=35574, payload={"node_id":"NODE_1","temperature":27.81,"heart_rate":100.81,"spo2":0.00}[0m
+[0;32mI (1208693) ThingsBoard: Received data: ID: NODE_1, Temp: 27.87, HR: 99.69, SpO2: 0.00[0m
+[0;32mI (1208693) ThingsBoard: RSSI: -28, SNR: 10.00[0m
+[0;32mI (1208693) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.87 C, Heart Rate: 99.69 bpm, SpO2: 0.00%[0m
+[0;32mI (1208713) ThingsBoard: Data sent successfully, msg_id=18382, payload={"node_id":"NODE_1","temperature":27.87,"heart_rate":99.69,"spo2":0.00}[0m
+[0;32mI (1238723) ThingsBoard: Received data: ID: NODE_1, Temp: 27.99, HR: 101.61, SpO2: 0.00[0m
+[0;32mI (1238723) ThingsBoard: RSSI: -27, SNR: 9.50[0m
+[0;32mI (1238723) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.99 C, Heart Rate: 101.61 bpm, SpO2: 0.00%[0m
+[0;32mI (1238743) ThingsBoard: Data sent successfully, msg_id=12217, payload={"node_id":"NODE_1","temperature":27.99,"heart_rate":101.61,"spo2":0.00}[0m
+[0;32mI (1268753) ThingsBoard: Received data: ID: NODE_1, Temp: 27.73, HR: 97.15, SpO2: 0.00[0m
+[0;32mI (1268753) ThingsBoard: RSSI: -27, SNR: 9.75[0m
+[0;32mI (1268753) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.73 C, Heart Rate: 97.15 bpm, SpO2: 0.00%[0m
+[0;32mI (1268773) ThingsBoard: Data sent successfully, msg_id=61675, payload={"node_id":"NODE_1","temperature":27.73,"heart_rate":97.15,"spo2":0.00}[0m
+[0;32mI (1298773) ThingsBoard: Received data: ID: NODE_1, Temp: 27.79, HR: 89.25, SpO2: 0.00[0m
+[0;32mI (1298773) ThingsBoard: RSSI: -24, SNR: 10.00[0m
+[0;32mI (1298773) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.79 C, Heart Rate: 89.25 bpm, SpO2: 0.00%[0m
+[0;32mI (1298793) ThingsBoard: Data sent successfully, msg_id=61127, payload={"node_id":"NODE_1","temperature":27.79,"heart_rate":89.25,"spo2":0.00}[0m
+[0;32mI (1328793) ThingsBoard: Received data: ID: NODE_1, Temp: 27.69, HR: 84.99, SpO2: 0.00[0m
+[0;32mI (1328793) ThingsBoard: RSSI: -25, SNR: 9.75[0m
+[0;32mI (1328793) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.69 C, Heart Rate: 84.99 bpm, SpO2: 0.00%[0m
+[0;32mI (1328813) ThingsBoard: Data sent successfully, msg_id=21668, payload={"node_id":"NODE_1","temperature":27.69,"heart_rate":84.99,"spo2":0.00}[0m
+[0;32mI (1358813) ThingsBoard: Received data: ID: NODE_1, Temp: 27.87, HR: 87.27, SpO2: 0.00[0m
+[0;32mI (1358813) ThingsBoard: RSSI: -33, SNR: 9.75[0m
+[0;32mI (1358813) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.87 C, Heart Rate: 87.27 bpm, SpO2: 0.00%[0m
+[0;32mI (1358833) ThingsBoard: Data sent successfully, msg_id=31293, payload={"node_id":"NODE_1","temperature":27.87,"heart_rate":87.27,"spo2":0.00}[0m
+[0;32mI (1388843) ThingsBoard: Received data: ID: NODE_1, Temp: 28.05, HR: 91.65, SpO2: 0.00[0m
+[0;32mI (1388843) ThingsBoard: RSSI: -44, SNR: 8.00[0m
+[0;32mI (1388843) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 28.05 C, Heart Rate: 91.65 bpm, SpO2: 0.00%[0m
+[0;32mI (1388853) ThingsBoard: Data sent successfully, msg_id=60721, payload={"node_id":"NODE_1","temperature":28.05,"heart_rate":91.65,"spo2":0.00}[0m
+[0;32mI (1418863) ThingsBoard: Received data: ID: NODE_1, Temp: 28.05, HR: 87.82, SpO2: 0.00[0m
+[0;32mI (1418863) ThingsBoard: RSSI: -34, SNR: 9.50[0m
+[0;32mI (1418863) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 28.05 C, Heart Rate: 87.82 bpm, SpO2: 0.00%[0m
+[0;32mI (1418883) ThingsBoard: Data sent successfully, msg_id=42783, payload={"node_id":"NODE_1","temperature":28.05,"heart_rate":87.82,"spo2":0.00}[0m
+[0;32mI (1448883) ThingsBoard: Received data: ID: NODE_1, Temp: 27.91, HR: 83.18, SpO2: 0.00[0m
+[0;32mI (1448883) ThingsBoard: RSSI: -39, SNR: 9.25[0m
+[0;32mI (1448883) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.91 C, Heart Rate: 83.18 bpm, SpO2: 0.00%[0m
+[0;32mI (1448903) ThingsBoard: Data sent successfully, msg_id=23549, payload={"node_id":"NODE_1","temperature":27.91,"heart_rate":83.18,"spo2":0.00}[0m
+[0;32mI (1478903) ThingsBoard: Received data: ID: NODE_1, Temp: 28.13, HR: 84.99, SpO2: 0.00[0m
+[0;32mI (1478903) ThingsBoard: RSSI: -34, SNR: 9.75[0m
+[0;32mI (1478903) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 28.13 C, Heart Rate: 84.99 bpm, SpO2: 0.00%[0m
+[0;32mI (1478923) ThingsBoard: Data sent successfully, msg_id=51586, payload={"node_id":"NODE_1","temperature":28.13,"heart_rate":84.99,"spo2":0.00}[0m
+[0;32mI (1508923) ThingsBoard: Received data: ID: NODE_1, Temp: 27.99, HR: 85.46, SpO2: 0.00[0m
+[0;32mI (1508923) ThingsBoard: RSSI: -35, SNR: 10.00[0m
+[0;32mI (1508923) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.99 C, Heart Rate: 85.46 bpm, SpO2: 0.00%[0m
+[0;32mI (1508943) ThingsBoard: Data sent successfully, msg_id=43921, payload={"node_id":"NODE_1","temperature":27.99,"heart_rate":85.46,"spo2":0.00}[0m
+[0;32mI (1538943) ThingsBoard: Received data: ID: NODE_1, Temp: 27.91, HR: 84.35, SpO2: 0.00[0m
+[0;32mI (1538943) ThingsBoard: RSSI: -35, SNR: 10.00[0m
+[0;32mI (1538943) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.91 C, Heart Rate: 84.35 bpm, SpO2: 0.00%[0m
+[0;32mI (1538963) ThingsBoard: Data sent successfully, msg_id=54518, payload={"node_id":"NODE_1","temperature":27.91,"heart_rate":84.35,"spo2":0.00}[0m
+[0;32mI (1568963) ThingsBoard: Received data: ID: NODE_1, Temp: 27.91, HR: 82.95, SpO2: 0.00[0m
+[0;32mI (1568963) ThingsBoard: RSSI: -30, SNR: 10.00[0m
+[0;32mI (1568963) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.91 C, Heart Rate: 82.95 bpm, SpO2: 0.00%[0m
+[0;32mI (1568983) ThingsBoard: Data sent successfully, msg_id=6817, payload={"node_id":"NODE_1","temperature":27.91,"heart_rate":82.95,"spo2":0.00}[0m
+[0;32mI (1599983) ThingsBoard: Received data: ID: NODE_1, Temp: 28.17, HR: 81.62, SpO2: 0.00[0m
+[0;32mI (1599983) ThingsBoard: RSSI: -48, SNR: 10.00[0m
+[0;32mI (1599983) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 28.17 C, Heart Rate: 81.62 bpm, SpO2: 0.00%[0m
+[0;32mI (1600003) ThingsBoard: Data sent successfully, msg_id=42850, payload={"node_id":"NODE_1","temperature":28.17,"heart_rate":81.62,"spo2":0.00}[0m
+[0;32mI (1630003) ThingsBoard: Received data: ID: NODE_1, Temp: 28.07, HR: 78.44, SpO2: 0.00[0m
+[0;32mI (1630003) ThingsBoard: RSSI: -41, SNR: 10.00[0m
+[0;32mI (1630003) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 28.07 C, Heart Rate: 78.44 bpm, SpO2: 0.00%[0m
+[0;32mI (1630023) ThingsBoard: Data sent successfully, msg_id=27935, payload={"node_id":"NODE_1","temperature":28.07,"heart_rate":78.44,"spo2":0.00}[0m
+[0;32mI (1660023) ThingsBoard: Received data: ID: NODE_1, Temp: 27.93, HR: 77.31, SpO2: 0.00[0m
+[0;32mI (1660023) ThingsBoard: RSSI: -40, SNR: 10.50[0m
+[0;32mI (1660023) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.93 C, Heart Rate: 77.31 bpm, SpO2: 0.00%[0m
+[0;32mI (1660043) ThingsBoard: Data sent successfully, msg_id=35317, payload={"node_id":"NODE_1","temperature":27.93,"heart_rate":77.31,"spo2":0.00}[0m
+[0;32mI (1690043) ThingsBoard: Received data: ID: NODE_1, Temp: 28.05, HR: 75.49, SpO2: 0.00[0m
+[0;32mI (1690043) ThingsBoard: RSSI: -37, SNR: 9.75[0m
+[0;32mI (1690043) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 28.05 C, Heart Rate: 75.49 bpm, SpO2: 0.00%[0m
+[0;32mI (1690063) ThingsBoard: Data sent successfully, msg_id=52667, payload={"node_id":"NODE_1","temperature":28.05,"heart_rate":75.49,"spo2":0.00}[0m
+[0;32mI (1720063) ThingsBoard: Received data: ID: NODE_1, Temp: 28.13, HR: 75.76, SpO2: 0.00[0m
+[0;32mI (1720063) ThingsBoard: RSSI: -38, SNR: 10.00[0m
+[0;32mI (1720063) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 28.13 C, Heart Rate: 75.76 bpm, SpO2: 0.00%[0m
+[0;32mI (1720073) ThingsBoard: Data sent successfully, msg_id=47830, payload={"node_id":"NODE_1","temperature":28.13,"heart_rate":75.76,"spo2":0.00}[0m

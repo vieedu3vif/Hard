@@ -1,0 +1,26 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D E:\ESPIDF\HealthST\build\bootloader\esp-idf\esptool_py && D:\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe D:/Espressif/frameworks/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 E:/ESPIDF/HealthST/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6880 bytes. 0x780 bytes (7%) free.
+[2/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/HealthST.c.obj
+E:/ESPIDF/HealthST/main/HealthST.c: In function 'mqtt_app_start':
+E:/ESPIDF/HealthST/main/HealthST.c:191:67: warning: passing argument 3 of 'esp_mqtt_client_register_event' from incompatible pointer type [-Wincompatible-pointer-types]
+  191 | esp_mqtt_client_register_event(mqtt_client, MQTT_EVENT_CONNECTED, mqtt_event_handler, NULL);
+      |                                                                   ^~~~~~~~~~~~~~~~~~
+      |                                                                   |
+      |                                                                   void (*)(esp_mqtt_event_t *)
+In file included from E:/ESPIDF/HealthST/main/HealthST.c:6:
+D:/Espressif/frameworks/esp-idf-v5.3.1/components/mqtt/esp-mqtt/include/mqtt_client.h:629:62: note: expected 'esp_event_handler_t' {aka 'void (*)(void *, const char *, long int,  void *)'} but argument is of type 'void (*)(esp_mqtt_event_t *)'
+  629 |                                          esp_event_handler_t event_handler,
+      |                                          ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+[3/8] Linking C static library esp-idf\main\libmain.a
+[4/8] Generating ld/sections.ld
+[5/8] Building C object CMakeFiles/HealthST.elf.dir/project_elf_src_esp32.c.obj
+[6/8] Linking CXX executable HealthST.elf
+[7/8] Generating binary image from built executable
+esptool.py v4.8.dev5
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated E:/ESPIDF/HealthST/build/HealthST.bin
+[8/8] cmd.exe /C "cd /D E:\ESPIDF\HealthST\build\esp-idf\esptool_py && D:\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe D:/Espressif/frameworks/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app E:/ESPIDF/HealthST/build/partition_table/partition-table.bin E:/ESPIDF/HealthST/build/HealthST.bin"
+HealthST.bin binary size 0xd8700 bytes. Smallest app partition is 0x100000 bytes. 0x27900 bytes (15%) free.

@@ -1,0 +1,110 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 188777542, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (32) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (32) boot: compile time Oct 10 2024 14:47:00[0m
+[0;32mI (32) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v1.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (45) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (54) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (63) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (93) boot: End of partition table[0m
+[0;32mI (97) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=265bch (157116) map[0m
+[0;32mI (159) esp_image: segment 1: paddr=000365e4 vaddr=3ffb0000 size=0404ch ( 16460) load[0m
+[0;32mI (166) esp_image: segment 2: paddr=0003a638 vaddr=40080000 size=059e0h ( 23008) load[0m
+[0;32mI (175) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a409ch (671900) map[0m
+[0;32mI (405) esp_image: segment 4: paddr=000e40c4 vaddr=400859e0 size=131a0h ( 78240) load[0m
+[0;32mI (449) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (449) boot: Disabling RNG early entropy source...[0m
+[0;32mI (461) cpu_start: Multicore app[0m
+[0;32mI (469) cpu_start: Pro cpu start user code[0m
+[0;32mI (469) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (469) app_init: Application information:[0m
+[0;32mI (472) app_init: Project name:     HealthST[0m
+[0;32mI (477) app_init: App version:      1[0m
+[0;32mI (482) app_init: Compile time:     Oct 13 2024 18:45:14[0m
+[0;32mI (488) app_init: ELF file SHA256:  7d17a9104...[0m
+[0;32mI (493) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (498) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (503) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (508) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (513) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (520) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (526) heap_init: At 3FFB8898 len 00027768 (157 KiB): DRAM[0m
+[0;32mI (532) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (538) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (545) heap_init: At 40098B80 len 00007480 (29 KiB): IRAM[0m
+[0;32mI (553) spi_flash: detected chip: gd[0m
+[0;32mI (555) spi_flash: flash io: dio[0m
+[0;33mW (559) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (573) main_task: Started on CPU0[0m
+[0;32mI (583) main_task: Calling app_main()[0m
+I (613) wifi:wifi driver task: 3ffc08e8, prio:23, stack:6656, core=0
+I (623) wifi:wifi firmware version: ccaebfa
+I (623) wifi:wifi certification version: v7.0
+I (623) wifi:config NVS flash: enabled
+I (623) wifi:config nano formating: disabled
+I (623) wifi:Init data frame dynamic rx buffer num: 32
+I (633) wifi:Init static rx mgmt buffer num: 5
+I (633) wifi:Init management short buffer num: 32
+I (643) wifi:Init dynamic tx buffer num: 32
+I (643) wifi:Init static rx buffer size: 1600
+I (653) wifi:Init static rx buffer num: 10
+I (653) wifi:Init dynamic rx buffer num: 32
+[0;32mI (653) wifi_init: rx ba win: 6[0m
+[0;32mI (663) wifi_init: accept mbox: 6[0m
+[0;32mI (663) wifi_init: tcpip mbox: 32[0m
+[0;32mI (663) wifi_init: udp mbox: 6[0m
+[0;32mI (673) wifi_init: tcp mbox: 6[0m
+[0;32mI (673) wifi_init: tcp tx win: 5760[0m
+[0;32mI (683) wifi_init: tcp rx win: 5760[0m
+[0;32mI (683) wifi_init: tcp mss: 1440[0m
+[0;32mI (683) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (693) wifi_init: WiFi RX IRAM OP enabled[0m
+W (693) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2
+[0;32mI (703) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+I (783) wifi:mode : sta (e8:6b:ea:09:d5:24)
+I (783) wifi:enable tsf
+[0;31mE (793) esp-tls: couldn't get hostname for :demo.thingsboard.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (803) transport_base: Failed to open a new connection: 32769[0m
+I (803) wifi:[0;31mE (803) mqtt_client: Error transport connect[0m
+new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1, snd_ch_cfg:0x0
+[0;32mI (813) ThingsBoard: Disconnected from ThingsBoard[0m
+I (823) wifi:[0;32mI (813) ThingsBoard: LoRa initialized successfully.[0m
+state: init -> auth (0xb0)
+[0;32mI (803) main_task: Returned from app_main()[0m
+I (843) wifi:state: auth -> assoc (0x0)
+I (863) wifi:state: assoc -> run (0x10)
+I (883) wifi:connected with Việt Anh, aid = 4, channel 11, 40D, bssid = 04:95:e6:6a:e9:30
+I (883) wifi:security: WPA2-PSK, phy: bgn, rssi: -18
+I (883) wifi:pm start, type: 1
+
+I (893) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (903) wifi:<ba-add>idx:0 (ifx:0, 04:95:e6:6a:e9:30), tid:0, ssn:2, winSize:64
+I (943) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (3903) esp_netif_handlers: sta ip: 192.168.2.103, mask: 255.255.255.0, gw: 192.168.2.1[0m
+[0;32mI (11493) ThingsBoard: Connected to ThingsBoard[0m
+[0;32mI (65833) ThingsBoard: Received data: ID: NODE_1, Temp: 27.85, HR: 115.06, SpO2: 0.00[0m
+[0;32mI (65833) ThingsBoard: RSSI: -37, SNR: 10.00[0m
+[0;31mE (65833) ThingsBoard: Data format mismatch: ID: NODE_1, Temp: 27.85, HR: 115.06, SpO2: 0.00[0m
+[0;32mI (95843) ThingsBoard: Received data: ID: NODE_1, Temp: 27.81, HR: 127.64, SpO2: 0.00[0m
+[0;32mI (95843) ThingsBoard: RSSI: -36, SNR: 10.00[0m
+[0;31mE (95843) ThingsBoard: Data format mismatch: ID: NODE_1, Temp: 27.81, HR: 127.64, SpO2: 0.00[0m
+[0;32mI (125853) ThingsBoard: Received data: ID: NODE_1, Temp: 27.61, HR: 135.09, SpO2: 0.00[0m
+[0;32mI (125853) ThingsBoard: RSSI: -37, SNR: 9.25[0m
+[0;31mE (125853) ThingsBoard: Data format mismatch: ID: NODE_1, Temp: 27.61, HR: 135.09, SpO2: 0.00[0m

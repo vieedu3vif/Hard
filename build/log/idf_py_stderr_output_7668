@@ -1,0 +1,105 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM4 instead...[0m
+[0;33m--- esp-idf-monitor 1.4.0 on \\.\COM4 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081b06: panic_abort at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/panic.c:463
+0x4008a325: esp_system_abort at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/esp_system_chip.c:92
+0x40092959: __assert_func at D:/Espressif/frameworks/esp-idf-v5.3.1/components/newlib/assert.c:80
+0x40170c0e: esp_event_handler_register_with_internal at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_event/esp_event.c:690 (discriminator 1)
+0x40170d3e: esp_event_handler_register_with at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_event/esp_event.c:752
+0x400dac7d: esp_mqtt_client_register_event at D:/Espressif/frameworks/esp-idf-v5.3.1/components/mqtt/esp-mqtt/mqtt_client.c:2220
+0x400d81b7: mqtt_init at E:/ESPIDF/HealthST/main/HealthST.c:68
+0x400d81e3: send_data_to_thingsboard at E:/ESPIDF/HealthST/main/HealthST.c:83
+0x400d83cc: lora_receive_task at E:/ESPIDF/HealthST/main/HealthST.c:137
+0x4008ae31: vPortTaskWrapper at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081b06: panic_abort at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/panic.c:463
+0x4008a325: esp_system_abort at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/esp_system_chip.c:92
+0x40092959: __assert_func at D:/Espressif/frameworks/esp-idf-v5.3.1/components/newlib/assert.c:80
+0x40170c0e: esp_event_handler_register_with_internal at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_event/esp_event.c:690 (discriminator 1)
+0x40170d3e: esp_event_handler_register_with at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_event/esp_event.c:752
+0x400dac7d: esp_mqtt_client_register_event at D:/Espressif/frameworks/esp-idf-v5.3.1/components/mqtt/esp-mqtt/mqtt_client.c:2220
+0x400d81b7: mqtt_init at E:/ESPIDF/HealthST/main/HealthST.c:68
+0x400d81e3: send_data_to_thingsboard at E:/ESPIDF/HealthST/main/HealthST.c:83
+0x400d83a3: lora_receive_task at E:/ESPIDF/HealthST/main/HealthST.c:135
+0x4008ae31: vPortTaskWrapper at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081b06: panic_abort at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/panic.c:463
+0x4008a325: esp_system_abort at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/esp_system_chip.c:92
+0x40092959: __assert_func at D:/Espressif/frameworks/esp-idf-v5.3.1/components/newlib/assert.c:80
+0x40170c0e: esp_event_handler_register_with_internal at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_event/esp_event.c:690 (discriminator 1)
+0x40170d3e: esp_event_handler_register_with at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_event/esp_event.c:752
+0x400dac7d: esp_mqtt_client_register_event at D:/Espressif/frameworks/esp-idf-v5.3.1/components/mqtt/esp-mqtt/mqtt_client.c:2220
+0x400d81b7: mqtt_init at E:/ESPIDF/HealthST/main/HealthST.c:68
+0x400d81e3: send_data_to_thingsboard at E:/ESPIDF/HealthST/main/HealthST.c:83
+0x400d83cc: lora_receive_task at E:/ESPIDF/HealthST/main/HealthST.c:137
+0x4008ae31: vPortTaskWrapper at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081b06: panic_abort at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/panic.c:463
+0x4008a325: esp_system_abort at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/esp_system_chip.c:92
+0x40092959: __assert_func at D:/Espressif/frameworks/esp-idf-v5.3.1/components/newlib/assert.c:80
+0x40170c0e: esp_event_handler_register_with_internal at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_event/esp_event.c:690 (discriminator 1)
+0x40170d3e: esp_event_handler_register_with at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_event/esp_event.c:752
+0x400dac7d: esp_mqtt_client_register_event at D:/Espressif/frameworks/esp-idf-v5.3.1/components/mqtt/esp-mqtt/mqtt_client.c:2220
+0x400d81b7: mqtt_init at E:/ESPIDF/HealthST/main/HealthST.c:68
+0x400d81e3: send_data_to_thingsboard at E:/ESPIDF/HealthST/main/HealthST.c:83
+0x400d83cc: lora_receive_task at E:/ESPIDF/HealthST/main/HealthST.c:137
+0x4008ae31: vPortTaskWrapper at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081b06: panic_abort at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/panic.c:463
+0x4008a325: esp_system_abort at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/esp_system_chip.c:92
+0x40092959: __assert_func at D:/Espressif/frameworks/esp-idf-v5.3.1/components/newlib/assert.c:80
+0x40170c0e: esp_event_handler_register_with_internal at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_event/esp_event.c:690 (discriminator 1)
+0x40170d3e: esp_event_handler_register_with at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_event/esp_event.c:752
+0x400dac7d: esp_mqtt_client_register_event at D:/Espressif/frameworks/esp-idf-v5.3.1/components/mqtt/esp-mqtt/mqtt_client.c:2220
+0x400d81b7: mqtt_init at E:/ESPIDF/HealthST/main/HealthST.c:68
+0x400d81e3: send_data_to_thingsboard at E:/ESPIDF/HealthST/main/HealthST.c:83
+0x400d83cc: lora_receive_task at E:/ESPIDF/HealthST/main/HealthST.c:137
+0x4008ae31: vPortTaskWrapper at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081b06: panic_abort at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/panic.c:463
+0x4008a325: esp_system_abort at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/esp_system_chip.c:92
+0x40092959: __assert_func at D:/Espressif/frameworks/esp-idf-v5.3.1/components/newlib/assert.c:80
+0x40170c0e: esp_event_handler_register_with_internal at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_event/esp_event.c:690 (discriminator 1)
+0x40170d3e: esp_event_handler_register_with at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_event/esp_event.c:752
+0x400dac7d: esp_mqtt_client_register_event at D:/Espressif/frameworks/esp-idf-v5.3.1/components/mqtt/esp-mqtt/mqtt_client.c:2220
+0x400d81b7: mqtt_init at E:/ESPIDF/HealthST/main/HealthST.c:68
+0x400d81e3: send_data_to_thingsboard at E:/ESPIDF/HealthST/main/HealthST.c:83
+0x400d83cc: lora_receive_task at E:/ESPIDF/HealthST/main/HealthST.c:137
+0x4008ae31: vPortTaskWrapper at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400dac78: esp_mqtt_client_register_event at D:/Espressif/frameworks/esp-idf-v5.3.1/components/mqtt/esp-mqtt/mqtt_client.c:2220
+[0m
+[0;33m0x400d8058: mqtt_event_handler at E:/ESPIDF/HealthST/main/HealthST.c:52
+[0m
+[0;33m0x400d8058: mqtt_event_handler at E:/ESPIDF/HealthST/main/HealthST.c:52
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400dac75: esp_mqtt_client_register_event at D:/Espressif/frameworks/esp-idf-v5.3.1/components/mqtt/esp-mqtt/mqtt_client.c:2220
+0x400d81b7: mqtt_init at E:/ESPIDF/HealthST/main/HealthST.c:68
+0x400d81e3: send_data_to_thingsboard at E:/ESPIDF/HealthST/main/HealthST.c:83
+0x400d83cc: lora_receive_task at E:/ESPIDF/HealthST/main/HealthST.c:137
+0x4008ae31: vPortTaskWrapper at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400dac78: esp_mqtt_client_register_event at D:/Espressif/frameworks/esp-idf-v5.3.1/components/mqtt/esp-mqtt/mqtt_client.c:2220
+[0m
+[0;33m0x400d8058: mqtt_event_handler at E:/ESPIDF/HealthST/main/HealthST.c:52
+[0m

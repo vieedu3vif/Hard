@@ -1,0 +1,641 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 188777542, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (32) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (32) boot: compile time Oct 10 2024 14:47:00[0m
+[0;32mI (32) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v1.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (45) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (54) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (63) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (93) boot: End of partition table[0m
+[0;32mI (97) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=24334h (148276) map[0m
+[0;32mI (156) esp_image: segment 1: paddr=0003435c vaddr=3ffb0000 size=03ee0h ( 16096) load[0m
+[0;32mI (163) esp_image: segment 2: paddr=00038244 vaddr=40080000 size=07dd4h ( 32212) load[0m
+[0;32mI (175) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9c4f0h (640240) map[0m
+[0;32mI (395) esp_image: segment 4: paddr=000dc518 vaddr=40087dd4 size=0f578h ( 62840) load[0m
+[0;32mI (432) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (432) boot: Disabling RNG early entropy source...[0m
+[0;32mI (444) cpu_start: Multicore app[0m
+[0;32mI (452) cpu_start: Pro cpu start user code[0m
+[0;32mI (452) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (452) app_init: Application information:[0m
+[0;32mI (455) app_init: Project name:     HealthST[0m
+[0;32mI (460) app_init: App version:      1[0m
+[0;32mI (464) app_init: Compile time:     Oct 13 2024 18:45:14[0m
+[0;32mI (470) app_init: ELF file SHA256:  c09881817...[0m
+[0;32mI (476) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (481) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (486) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (491) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (496) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (503) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (509) heap_init: At 3FFB86F0 len 00027910 (158 KiB): DRAM[0m
+[0;32mI (515) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (521) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (528) heap_init: At 4009734C len 00008CB4 (35 KiB): IRAM[0m
+[0;32mI (535) spi_flash: detected chip: gd[0m
+[0;32mI (538) spi_flash: flash io: dio[0m
+[0;33mW (542) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (556) main_task: Started on CPU0[0m
+[0;32mI (566) main_task: Calling app_main()[0m
+I (596) wifi:wifi driver task: 3ffc0760, prio:23, stack:6656, core=0
+I (606) wifi:wifi firmware version: ccaebfa
+I (606) wifi:wifi certification version: v7.0
+I (606) wifi:config NVS flash: enabled
+I (606) wifi:config nano formating: disabled
+I (606) wifi:Init data frame dynamic rx buffer num: 32
+I (616) wifi:Init static rx mgmt buffer num: 5
+I (616) wifi:Init management short buffer num: 32
+I (626) wifi:Init dynamic tx buffer num: 32
+I (626) wifi:Init static rx buffer size: 1600
+I (636) wifi:Init static rx buffer num: 10
+I (636) wifi:Init dynamic rx buffer num: 32
+[0;32mI (636) wifi_init: rx ba win: 6[0m
+[0;32mI (646) wifi_init: accept mbox: 6[0m
+[0;32mI (646) wifi_init: tcpip mbox: 32[0m
+[0;32mI (646) wifi_init: udp mbox: 6[0m
+[0;32mI (656) wifi_init: tcp mbox: 6[0m
+[0;32mI (656) wifi_init: tcp tx win: 5760[0m
+[0;32mI (666) wifi_init: tcp rx win: 5760[0m
+[0;32mI (666) wifi_init: tcp mss: 1440[0m
+[0;32mI (666) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (676) wifi_init: WiFi RX IRAM OP enabled[0m
+W (676) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2
+[0;32mI (686) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+I (766) wifi:mode : sta (e8:6b:ea:09:d5:24)
+I (776) wifi:enable tsf
+[0;32mI (776) ThingsBoard: Waiting for Wi-Fi to connect...[0m
+I (786) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1, snd_ch_cfg:0x0
+I (786) wifi:state: init -> auth (0xb0)
+I (806) wifi:state: auth -> assoc (0x0)
+I (826) wifi:state: assoc -> run (0x10)
+I (836) wifi:connected with Việt Anh, aid = 3, channel 11, 40D, bssid = 04:95:e6:6a:e9:30
+I (836) wifi:security: WPA2-PSK, phy: bgn, rssi: -17
+I (846) wifi:pm start, type: 1
+
+I (846) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+[0;32mI (856) ThingsBoard: Connected to Wi-Fi[0m
+I (866) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (866) wifi:<ba-add>idx:0 (ifx:0, 04:95:e6:6a:e9:30), tid:0, ssn:2, winSize:64
+[0;32mI (876) ThingsBoard: Wi-Fi connected, starting ThingsBoard data transmission[0m
+[0;31mE (876) esp-tls: couldn't get hostname for :demo.thingsboard.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (886) esp-tls: Failed to open new connection[0m
+[0;31mE (896) transport_base: Failed to open a new connection[0m
+[0;31mE (896) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (906) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (3856) esp_netif_handlers: sta ip: 192.168.2.103, mask: 255.255.255.0, gw: 192.168.2.1[0m
+[0;31mE (6296) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (6296) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (6306) esp-tls: create_ssl_handle failed[0m
+[0;31mE (6316) esp-tls: Failed to open new connection[0m
+[0;31mE (6316) transport_base: Failed to open a new connection[0m
+[0;31mE (6326) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (6326) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (11626) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (11626) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (11636) esp-tls: create_ssl_handle failed[0m
+[0;31mE (11636) esp-tls: Failed to open new connection[0m
+[0;31mE (11646) transport_base: Failed to open a new connection[0m
+[0;31mE (11656) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (11656) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (16946) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (16946) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (16956) esp-tls: create_ssl_handle failed[0m
+[0;31mE (16966) esp-tls: Failed to open new connection[0m
+[0;31mE (16966) transport_base: Failed to open a new connection[0m
+[0;31mE (16976) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (16986) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (22266) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (22266) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (22286) esp-tls: create_ssl_handle failed[0m
+[0;31mE (22286) esp-tls: Failed to open new connection[0m
+[0;31mE (22296) transport_base: Failed to open a new connection[0m
+[0;31mE (22306) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (22306) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (27596) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (27596) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (27606) esp-tls: create_ssl_handle failed[0m
+[0;31mE (27616) esp-tls: Failed to open new connection[0m
+[0;31mE (27616) transport_base: Failed to open a new connection[0m
+[0;31mE (27626) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (27636) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (33026) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (33026) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (33036) esp-tls: create_ssl_handle failed[0m
+[0;31mE (33036) esp-tls: Failed to open new connection[0m
+[0;31mE (33046) transport_base: Failed to open a new connection[0m
+[0;31mE (33056) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (33056) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (38346) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (38346) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (38356) esp-tls: create_ssl_handle failed[0m
+[0;31mE (38366) esp-tls: Failed to open new connection[0m
+[0;31mE (38366) transport_base: Failed to open a new connection[0m
+[0;31mE (38376) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (38376) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (43676) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (43676) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (43686) esp-tls: create_ssl_handle failed[0m
+[0;31mE (43686) esp-tls: Failed to open new connection[0m
+[0;31mE (43696) transport_base: Failed to open a new connection[0m
+[0;31mE (43706) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (43706) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (48996) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (48996) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (49006) esp-tls: create_ssl_handle failed[0m
+[0;31mE (49016) esp-tls: Failed to open new connection[0m
+[0;31mE (49016) transport_base: Failed to open a new connection[0m
+[0;31mE (49026) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (49036) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (54326) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (54326) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (54336) esp-tls: create_ssl_handle failed[0m
+[0;31mE (54336) esp-tls: Failed to open new connection[0m
+[0;31mE (54346) transport_base: Failed to open a new connection[0m
+[0;31mE (54356) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (54356) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (59646) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (59646) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (59656) esp-tls: create_ssl_handle failed[0m
+[0;31mE (59666) esp-tls: Failed to open new connection[0m
+[0;31mE (59666) transport_base: Failed to open a new connection[0m
+[0;31mE (59676) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (59686) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (64976) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (64976) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (64986) esp-tls: create_ssl_handle failed[0m
+[0;31mE (64996) esp-tls: Failed to open new connection[0m
+[0;31mE (64996) transport_base: Failed to open a new connection[0m
+[0;31mE (65006) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (65006) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (70296) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (70296) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (70306) esp-tls: create_ssl_handle failed[0m
+[0;31mE (70316) esp-tls: Failed to open new connection[0m
+[0;31mE (70316) transport_base: Failed to open a new connection[0m
+[0;31mE (70326) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (70336) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (75626) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (75626) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (75636) esp-tls: create_ssl_handle failed[0m
+[0;31mE (75636) esp-tls: Failed to open new connection[0m
+[0;31mE (75646) transport_base: Failed to open a new connection[0m
+[0;31mE (75656) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (75656) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (80946) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (80946) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (80956) esp-tls: create_ssl_handle failed[0m
+[0;31mE (80966) esp-tls: Failed to open new connection[0m
+[0;31mE (80966) transport_base: Failed to open a new connection[0m
+[0;31mE (80976) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (80986) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (86266) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (86266) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (86286) esp-tls: create_ssl_handle failed[0m
+[0;31mE (86286) esp-tls: Failed to open new connection[0m
+[0;31mE (86296) transport_base: Failed to open a new connection[0m
+[0;31mE (86306) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (86306) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (91596) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (91596) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (91606) esp-tls: create_ssl_handle failed[0m
+[0;31mE (91616) esp-tls: Failed to open new connection[0m
+[0;31mE (91616) transport_base: Failed to open a new connection[0m
+[0;31mE (91626) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (91626) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (96926) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (96926) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (96936) esp-tls: create_ssl_handle failed[0m
+[0;31mE (96936) esp-tls: Failed to open new connection[0m
+[0;31mE (96946) transport_base: Failed to open a new connection[0m
+[0;31mE (96956) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (96956) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (102246) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (102246) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (102256) esp-tls: create_ssl_handle failed[0m
+[0;31mE (102266) esp-tls: Failed to open new connection[0m
+[0;31mE (102266) transport_base: Failed to open a new connection[0m
+[0;31mE (102276) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (102276) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (107576) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (107576) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (107586) esp-tls: create_ssl_handle failed[0m
+[0;31mE (107586) esp-tls: Failed to open new connection[0m
+[0;31mE (107596) transport_base: Failed to open a new connection[0m
+[0;31mE (107606) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (107606) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (112896) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (112896) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (112906) esp-tls: create_ssl_handle failed[0m
+[0;31mE (112916) esp-tls: Failed to open new connection[0m
+[0;31mE (112916) transport_base: Failed to open a new connection[0m
+[0;31mE (112926) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (112926) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (118216) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (118226) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (118236) esp-tls: create_ssl_handle failed[0m
+[0;31mE (118236) esp-tls: Failed to open new connection[0m
+[0;31mE (118246) transport_base: Failed to open a new connection[0m
+[0;31mE (118256) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (118256) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (123546) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (123546) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (123556) esp-tls: create_ssl_handle failed[0m
+[0;31mE (123566) esp-tls: Failed to open new connection[0m
+[0;31mE (123566) transport_base: Failed to open a new connection[0m
+[0;31mE (123576) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (123576) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (128876) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (128876) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (128886) esp-tls: create_ssl_handle failed[0m
+[0;31mE (128896) esp-tls: Failed to open new connection[0m
+[0;31mE (128896) transport_base: Failed to open a new connection[0m
+[0;31mE (128906) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (128906) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (134206) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (134206) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (134216) esp-tls: create_ssl_handle failed[0m
+[0;31mE (134216) esp-tls: Failed to open new connection[0m
+[0;31mE (134226) transport_base: Failed to open a new connection[0m
+[0;31mE (134236) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (134236) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (139516) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (139526) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (139536) esp-tls: create_ssl_handle failed[0m
+[0;31mE (139536) esp-tls: Failed to open new connection[0m
+[0;31mE (139546) transport_base: Failed to open a new connection[0m
+[0;31mE (139556) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (139556) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (144846) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (144846) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (144856) esp-tls: create_ssl_handle failed[0m
+[0;31mE (144866) esp-tls: Failed to open new connection[0m
+[0;31mE (144866) transport_base: Failed to open a new connection[0m
+[0;31mE (144876) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (144876) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (150196) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (150196) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (150206) esp-tls: create_ssl_handle failed[0m
+[0;31mE (150216) esp-tls: Failed to open new connection[0m
+[0;31mE (150216) transport_base: Failed to open a new connection[0m
+[0;31mE (150226) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (150236) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (155496) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (155496) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (155506) esp-tls: create_ssl_handle failed[0m
+[0;31mE (155516) esp-tls: Failed to open new connection[0m
+[0;31mE (155516) transport_base: Failed to open a new connection[0m
+[0;31mE (155526) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (155526) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (160816) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (160816) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (160836) esp-tls: create_ssl_handle failed[0m
+[0;31mE (160836) esp-tls: Failed to open new connection[0m
+[0;31mE (160846) transport_base: Failed to open a new connection[0m
+[0;31mE (160846) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (160856) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (166146) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (166156) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (166166) esp-tls: create_ssl_handle failed[0m
+[0;31mE (166166) esp-tls: Failed to open new connection[0m
+[0;31mE (166176) transport_base: Failed to open a new connection[0m
+[0;31mE (166186) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (166186) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (171466) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (171466) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (171476) esp-tls: create_ssl_handle failed[0m
+[0;31mE (171486) esp-tls: Failed to open new connection[0m
+[0;31mE (171486) transport_base: Failed to open a new connection[0m
+[0;31mE (171496) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (171506) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (176796) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (176796) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (176806) esp-tls: create_ssl_handle failed[0m
+[0;31mE (176806) esp-tls: Failed to open new connection[0m
+[0;31mE (176816) transport_base: Failed to open a new connection[0m
+[0;31mE (176826) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (176826) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (182116) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (182116) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (182126) esp-tls: create_ssl_handle failed[0m
+[0;31mE (182136) esp-tls: Failed to open new connection[0m
+[0;31mE (182136) transport_base: Failed to open a new connection[0m
+[0;31mE (182146) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (182156) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (187446) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (187446) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (187456) esp-tls: create_ssl_handle failed[0m
+[0;31mE (187466) esp-tls: Failed to open new connection[0m
+[0;31mE (187466) transport_base: Failed to open a new connection[0m
+[0;31mE (187476) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (187486) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (192776) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (192776) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (192786) esp-tls: create_ssl_handle failed[0m
+[0;31mE (192786) esp-tls: Failed to open new connection[0m
+[0;31mE (192796) transport_base: Failed to open a new connection[0m
+[0;31mE (192806) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (192806) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (198096) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (198096) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (198106) esp-tls: create_ssl_handle failed[0m
+[0;31mE (198106) esp-tls: Failed to open new connection[0m
+[0;31mE (198116) transport_base: Failed to open a new connection[0m
+[0;31mE (198126) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (198126) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (203426) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (203426) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (203436) esp-tls: create_ssl_handle failed[0m
+[0;31mE (203446) esp-tls: Failed to open new connection[0m
+[0;31mE (203446) transport_base: Failed to open a new connection[0m
+[0;31mE (203456) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (203466) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (208746) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (208746) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (208756) esp-tls: create_ssl_handle failed[0m
+[0;31mE (208756) esp-tls: Failed to open new connection[0m
+[0;31mE (208766) transport_base: Failed to open a new connection[0m
+[0;31mE (208776) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (208776) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (214066) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (214076) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (214086) esp-tls: create_ssl_handle failed[0m
+[0;31mE (214086) esp-tls: Failed to open new connection[0m
+[0;31mE (214096) transport_base: Failed to open a new connection[0m
+[0;31mE (214106) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (214106) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (219396) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (219396) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (219406) esp-tls: create_ssl_handle failed[0m
+[0;31mE (219416) esp-tls: Failed to open new connection[0m
+[0;31mE (219416) transport_base: Failed to open a new connection[0m
+[0;31mE (219426) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (219426) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (224716) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (224716) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (224736) esp-tls: create_ssl_handle failed[0m
+[0;31mE (224736) esp-tls: Failed to open new connection[0m
+[0;31mE (224746) transport_base: Failed to open a new connection[0m
+[0;31mE (224756) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (224756) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (230056) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (230056) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (230066) esp-tls: create_ssl_handle failed[0m
+[0;31mE (230076) esp-tls: Failed to open new connection[0m
+[0;31mE (230076) transport_base: Failed to open a new connection[0m
+[0;31mE (230086) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (230086) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (235366) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (235366) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (235386) esp-tls: create_ssl_handle failed[0m
+[0;31mE (235386) esp-tls: Failed to open new connection[0m
+[0;31mE (235396) transport_base: Failed to open a new connection[0m
+[0;31mE (235406) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (235406) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (240696) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (240696) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (240706) esp-tls: create_ssl_handle failed[0m
+[0;31mE (240716) esp-tls: Failed to open new connection[0m
+[0;31mE (240716) transport_base: Failed to open a new connection[0m
+[0;31mE (240726) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (240726) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (246016) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (246016) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (246026) esp-tls: create_ssl_handle failed[0m
+[0;31mE (246036) esp-tls: Failed to open new connection[0m
+[0;31mE (246036) transport_base: Failed to open a new connection[0m
+[0;31mE (246046) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (246056) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (251346) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (251346) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (251356) esp-tls: create_ssl_handle failed[0m
+[0;31mE (251366) esp-tls: Failed to open new connection[0m
+[0;31mE (251366) transport_base: Failed to open a new connection[0m
+[0;31mE (251376) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (251376) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (256666) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (256666) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (256676) esp-tls: create_ssl_handle failed[0m
+[0;31mE (256686) esp-tls: Failed to open new connection[0m
+[0;31mE (256686) transport_base: Failed to open a new connection[0m
+[0;31mE (256696) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (256706) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (261996) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (261996) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (262006) esp-tls: create_ssl_handle failed[0m
+[0;31mE (262006) esp-tls: Failed to open new connection[0m
+[0;31mE (262016) transport_base: Failed to open a new connection[0m
+[0;31mE (262026) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (262026) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (267316) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (267316) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (267326) esp-tls: create_ssl_handle failed[0m
+[0;31mE (267336) esp-tls: Failed to open new connection[0m
+[0;31mE (267336) transport_base: Failed to open a new connection[0m
+[0;31mE (267346) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (267356) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (272646) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (272646) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (272656) esp-tls: create_ssl_handle failed[0m
+[0;31mE (272656) esp-tls: Failed to open new connection[0m
+[0;31mE (272666) transport_base: Failed to open a new connection[0m
+[0;31mE (272676) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (272676) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (277966) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (277966) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (277976) esp-tls: create_ssl_handle failed[0m
+[0;31mE (277986) esp-tls: Failed to open new connection[0m
+[0;31mE (277996) transport_base: Failed to open a new connection[0m
+[0;31mE (277996) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (278006) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (283286) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (283296) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (283306) esp-tls: create_ssl_handle failed[0m
+[0;31mE (283306) esp-tls: Failed to open new connection[0m
+[0;31mE (283316) transport_base: Failed to open a new connection[0m
+[0;31mE (283326) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (283326) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (288626) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (288626) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (288636) esp-tls: create_ssl_handle failed[0m
+[0;31mE (288636) esp-tls: Failed to open new connection[0m
+[0;31mE (288646) transport_base: Failed to open a new connection[0m
+[0;31mE (288656) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (288656) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (293946) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (293946) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (293956) esp-tls: create_ssl_handle failed[0m
+[0;31mE (293956) esp-tls: Failed to open new connection[0m
+[0;31mE (293966) transport_base: Failed to open a new connection[0m
+[0;31mE (293976) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (293976) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (299266) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (299266) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (299276) esp-tls: create_ssl_handle failed[0m
+[0;31mE (299286) esp-tls: Failed to open new connection[0m
+[0;31mE (299286) transport_base: Failed to open a new connection[0m
+[0;31mE (299296) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (299306) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (304586) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (304586) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (304606) esp-tls: create_ssl_handle failed[0m
+[0;31mE (304606) esp-tls: Failed to open new connection[0m
+[0;31mE (304616) transport_base: Failed to open a new connection[0m
+[0;31mE (304626) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (304626) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (309916) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (309916) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (309926) esp-tls: create_ssl_handle failed[0m
+[0;31mE (309936) esp-tls: Failed to open new connection[0m
+[0;31mE (309936) transport_base: Failed to open a new connection[0m
+[0;31mE (309946) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (309956) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (315246) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (315246) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (315256) esp-tls: create_ssl_handle failed[0m
+[0;31mE (315266) esp-tls: Failed to open new connection[0m
+[0;31mE (315266) transport_base: Failed to open a new connection[0m
+[0;31mE (315276) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (315286) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (320566) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (320566) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (320576) esp-tls: create_ssl_handle failed[0m
+[0;31mE (320586) esp-tls: Failed to open new connection[0m
+[0;31mE (320586) transport_base: Failed to open a new connection[0m
+[0;31mE (320596) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (320596) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (325886) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (325886) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (325906) esp-tls: create_ssl_handle failed[0m
+[0;31mE (325906) esp-tls: Failed to open new connection[0m
+[0;31mE (325916) transport_base: Failed to open a new connection[0m
+[0;31mE (325926) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (325926) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (331216) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (331216) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (331226) esp-tls: create_ssl_handle failed[0m
+[0;31mE (331236) esp-tls: Failed to open new connection[0m
+[0;31mE (331236) transport_base: Failed to open a new connection[0m
+[0;31mE (331246) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (331246) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (336636) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (336646) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (336656) esp-tls: create_ssl_handle failed[0m
+[0;31mE (336656) esp-tls: Failed to open new connection[0m
+[0;31mE (336666) transport_base: Failed to open a new connection[0m
+[0;31mE (336676) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (336676) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (341966) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (341966) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (341976) esp-tls: create_ssl_handle failed[0m
+[0;31mE (341976) esp-tls: Failed to open new connection[0m
+[0;31mE (341986) transport_base: Failed to open a new connection[0m
+[0;31mE (341996) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (341996) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (347286) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (347286) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (347306) esp-tls: create_ssl_handle failed[0m
+[0;31mE (347306) esp-tls: Failed to open new connection[0m
+[0;31mE (347316) transport_base: Failed to open a new connection[0m
+[0;31mE (347326) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (347326) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (352616) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (352616) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (352626) esp-tls: create_ssl_handle failed[0m
+[0;31mE (352626) esp-tls: Failed to open new connection[0m
+[0;31mE (352636) transport_base: Failed to open a new connection[0m
+[0;31mE (352646) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (352646) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (357936) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (357946) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (357956) esp-tls: create_ssl_handle failed[0m
+[0;31mE (357956) esp-tls: Failed to open new connection[0m
+[0;31mE (357966) transport_base: Failed to open a new connection[0m
+[0;31mE (357976) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (357976) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (363266) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (363276) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (363286) esp-tls: create_ssl_handle failed[0m
+[0;31mE (363286) esp-tls: Failed to open new connection[0m
+[0;31mE (363296) transport_base: Failed to open a new connection[0m
+[0;31mE (363306) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (363306) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (368586) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (368596) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (368606) esp-tls: create_ssl_handle failed[0m
+[0;31mE (368606) esp-tls: Failed to open new connection[0m
+[0;31mE (368616) transport_base: Failed to open a new connection[0m
+[0;31mE (368626) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (368626) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (373916) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (373916) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (373926) esp-tls: create_ssl_handle failed[0m
+[0;31mE (373936) esp-tls: Failed to open new connection[0m
+[0;31mE (373936) transport_base: Failed to open a new connection[0m
+[0;31mE (373946) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (373946) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (379236) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (379246) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (379256) esp-tls: create_ssl_handle failed[0m
+[0;31mE (379256) esp-tls: Failed to open new connection[0m
+[0;31mE (379266) transport_base: Failed to open a new connection[0m
+[0;31mE (379276) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (379276) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (384566) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (384566) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (384576) esp-tls: create_ssl_handle failed[0m
+[0;31mE (384586) esp-tls: Failed to open new connection[0m
+[0;31mE (384586) transport_base: Failed to open a new connection[0m
+[0;31mE (384596) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (384596) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (389886) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (389886) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (389906) esp-tls: create_ssl_handle failed[0m
+[0;31mE (389906) esp-tls: Failed to open new connection[0m
+[0;31mE (389916) transport_base: Failed to open a new connection[0m
+[0;31mE (389926) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (389926) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (395226) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (395226) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (395236) esp-tls: create_ssl_handle failed[0m
+[0;31mE (395246) esp-tls: Failed to open new connection[0m
+[0;31mE (395246) transport_base: Failed to open a new connection[0m
+[0;31mE (395256) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (395256) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (400536) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (400536) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (400556) esp-tls: create_ssl_handle failed[0m
+[0;31mE (400556) esp-tls: Failed to open new connection[0m
+[0;31mE (400566) transport_base: Failed to open a new connection[0m
+[0;31mE (400576) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (400576) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (405866) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (405866) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (405876) esp-tls: create_ssl_handle failed[0m
+[0;31mE (405886) esp-tls: Failed to open new connection[0m
+[0;31mE (405886) transport_base: Failed to open a new connection[0m
+[0;31mE (405896) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (405896) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (411186) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (411186) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (411196) esp-tls: create_ssl_handle failed[0m
+[0;31mE (411206) esp-tls: Failed to open new connection[0m
+[0;31mE (411206) transport_base: Failed to open a new connection[0m
+[0;31mE (411216) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (411226) ThingsBoard: HTTPS request failed: ESP_ERR_HTTP_CONNECT[0m

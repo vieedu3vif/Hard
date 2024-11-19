@@ -1,0 +1,361 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 10 2024 14:47:00[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=265fch (157180) map[0m
+[0;32mI (159) esp_image: segment 1: paddr=00036624 vaddr=3ffb0000 size=0404ch ( 16460) load[0m
+[0;32mI (165) esp_image: segment 2: paddr=0003a678 vaddr=40080000 size=059a0h ( 22944) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a40cch (671948) map[0m
+[0;32mI (405) esp_image: segment 4: paddr=000e40f4 vaddr=400859a0 size=131e0h ( 78304) load[0m
+[0;32mI (448) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (448) boot: Disabling RNG early entropy source...[0m
+[0;32mI (460) cpu_start: Multicore app[0m
+[0;32mI (468) cpu_start: Pro cpu start user code[0m
+[0;32mI (468) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (469) app_init: Application information:[0m
+[0;32mI (471) app_init: Project name:     HealthST[0m
+[0;32mI (476) app_init: App version:      1[0m
+[0;32mI (481) app_init: Compile time:     Oct 13 2024 18:45:14[0m
+[0;32mI (487) app_init: ELF file SHA256:  e9e2efb9b...[0m
+[0;32mI (492) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (497) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (502) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (507) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (512) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (519) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (525) heap_init: At 3FFB8898 len 00027768 (157 KiB): DRAM[0m
+[0;32mI (531) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (538) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (544) heap_init: At 40098B80 len 00007480 (29 KiB): IRAM[0m
+[0;32mI (552) spi_flash: detected chip: generic[0m
+[0;32mI (555) spi_flash: flash io: dio[0m
+[0;33mW (559) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (573) main_task: Started on CPU0[0m
+[0;32mI (583) main_task: Calling app_main()[0m
+I (623) wifi:wifi driver task: 3ffc07c0, prio:23, stack:6656, core=0
+I (633) wifi:wifi firmware version: ccaebfa
+I (633) wifi:wifi certification version: v7.0
+I (633) wifi:config NVS flash: enabled
+I (633) wifi:config nano formating: disabled
+I (643) wifi:Init data frame dynamic rx buffer num: 32
+I (643) wifi:Init static rx mgmt buffer num: 5
+I (653) wifi:Init management short buffer num: 32
+I (653) wifi:Init dynamic tx buffer num: 32
+I (653) wifi:Init static rx buffer size: 1600
+I (663) wifi:Init static rx buffer num: 10
+I (663) wifi:Init dynamic rx buffer num: 32
+[0;32mI (673) wifi_init: rx ba win: 6[0m
+[0;32mI (673) wifi_init: accept mbox: 6[0m
+[0;32mI (673) wifi_init: tcpip mbox: 32[0m
+[0;32mI (683) wifi_init: udp mbox: 6[0m
+[0;32mI (683) wifi_init: tcp mbox: 6[0m
+[0;32mI (693) wifi_init: tcp tx win: 5760[0m
+[0;32mI (693) wifi_init: tcp rx win: 5760[0m
+[0;32mI (693) wifi_init: tcp mss: 1440[0m
+[0;32mI (703) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (703) wifi_init: WiFi RX IRAM OP enabled[0m
+W (713) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2
+[0;32mI (723) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+I (813) wifi:mode : sta (ec:64:c9:86:d6:ec)
+I (813) wifi:enable tsf
+[0;32mI (813) main_task: Returned from app_main()[0m
+[0;32mI (823) ThingsBoard: LoRa initialized successfully.[0m
+I (823) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1, snd_ch_cfg:0x0
+I (823) wifi:state: init -> auth (0xb0)
+I (843) wifi:state: auth -> assoc (0x0)
+I (863) wifi:state: assoc -> run (0x10)
+I (883) wifi:connected with Việt Anh, aid = 5, channel 11, 40D, bssid = 04:95:e6:6a:e9:30
+I (883) wifi:security: WPA2-PSK, phy: bgn, rssi: -24
+I (883) wifi:pm start, type: 1
+
+I (883) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (893) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (1203) wifi:<ba-add>idx:0 (ifx:0, 04:95:e6:6a:e9:30), tid:0, ssn:2, winSize:64
+[0;32mI (3903) esp_netif_handlers: sta ip: 192.168.2.104, mask: 255.255.255.0, gw: 192.168.2.1[0m
+[0;32mI (14823) ThingsBoard: Received data: ID: NODE_1, Temp: 27.87, HR: 80.15, SpO2: 0.00[0m
+[0;32mI (14823) ThingsBoard: RSSI: -62, SNR: 9.75[0m
+[0;32mI (14823) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.87 C, Heart Rate: 80.15 bpm, SpO2: 0.00%[0m
+[0;32mI (15453) ThingsBoard: Connected to ThingsBoard[0m
+[0;32mI (15453) ThingsBoard: Data sent successfully, msg_id=31363, payload={"node_id":"NODE_1","temperature":27.87,"heart_rate":80.15,"spo2":0.00}[0m
+[0;31mE (15643) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (15643) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (15653) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (15663) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;32mI (31313) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (31923) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (31923) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (31933) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (31943) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;32mI (36453) ThingsBoard: Received data: ��س�B���d}��Ѧ�%��� Z�pz%p.C[0m
+[0;32mI (36453) ThingsBoard: RSSI: -125, SNR: -11.75[0m
+[0;31mE (36453) ThingsBoard: Data format mismatch: ��س�B���d}��Ѧ�%��� Z�pz%p.C[0m
+[0;32mI (44463) ThingsBoard: Received data: ID: NODE_1, Temp: 28.07, HR: 82.36, SpO2: 0.00[0m
+[0;32mI (44463) ThingsBoard: RSSI: -57, SNR: 10.00[0m
+[0;32mI (44463) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 28.07 C, Heart Rate: 82.36 bpm, SpO2: 0.00%[0m
+[0;32mI (45163) ThingsBoard: Connected to ThingsBoard[0m
+[0;32mI (45163) ThingsBoard: Data sent successfully, msg_id=47701, payload={"node_id":"NODE_1","temperature":28.07,"heart_rate":82.36,"spo2":0.00}[0m
+[0;31mE (45453) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (45453) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (45463) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (45473) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;32mI (47603) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (48723) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (48723) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (48733) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (48743) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;32mI (61113) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (62443) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (62443) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (62453) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (62463) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;32mI (64393) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (68283) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (68283) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (68283) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (68293) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;32mI (74163) ThingsBoard: Received data: ID: NODE_1, Temp: 27.91, HR: 79.57, SpO2: 0.00[0m
+[0;32mI (74163) ThingsBoard: RSSI: -56, SNR: 9.75[0m
+[0;32mI (74163) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.91 C, Heart Rate: 79.57 bpm, SpO2: 0.00%[0m
+[0;32mI (74833) ThingsBoard: Connected to ThingsBoard[0m
+[0;32mI (74833) ThingsBoard: Data sent successfully, msg_id=61880, payload={"node_id":"NODE_1","temperature":27.91,"heart_rate":79.57,"spo2":0.00}[0m
+[0;31mE (75043) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (75043) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (75043) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (75053) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;32mI (78123) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (78823) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (78823) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (78833) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (78843) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;32mI (78863) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (79133) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (79133) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (79143) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (79153) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;32mI (85683) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (87633) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (87633) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (87643) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (87643) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;32mI (94503) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (94503) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (94503) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (94513) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (94523) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;32mI (94803) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (94803) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (94803) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (94813) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (94823) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;32mI (103303) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (103723) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (103723) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (103733) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (103743) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;32mI (104843) ThingsBoard: Received data: ID: NODE_1, Temp: 27.95, HR: 80.90, SpO2: 0.00[0m
+[0;32mI (104843) ThingsBoard: RSSI: -56, SNR: 9.75[0m
+[0;32mI (104843) ThingsBoard: Parsed data - Node ID: NODE_1, Temperature: 27.95 C, Heart Rate: 80.90 bpm, SpO2: 0.00%[0m
+[0;32mI (105453) ThingsBoard: Connected to ThingsBoard[0m
+[0;32mI (105453) ThingsBoard: Connected to ThingsBoard[0m
+[0;32mI (105463) ThingsBoard: Data sent successfully, msg_id=24311, payload={"node_id":"NODE_1","temperature":27.95,"heart_rate":80.90,"spo2":0.00}[0m
+[0;31mE (105463) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (105473) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (105483) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (105493) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;31mE (105623) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (105623) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (105633) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (105643) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;32mI (110163) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (110303) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (110303) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (110313) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (110323) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;32mI (116103) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (116103) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (116103) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (116113) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (116123) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;32mI (119373) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (119883) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (119893) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (119893) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (119903) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;32mI (121223) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (121523) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (121523) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (121533) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (121543) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;32mI (125943) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (126033) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (126033) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (126043) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (126053) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;32mI (130533) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (131503) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (131503) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (131513) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (131523) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;32mI (131773) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (131773) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (131773) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (131783) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (131793) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;32mI (137193) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (137813) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (137813) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (137813) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (137823) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;32mI (141703) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (142423) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;32mI (142423) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (142423) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (142423) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (142433) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;31mE (142443) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (142453) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;31mE (142453) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (142473) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;32mI (147123) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (147173) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (147173) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (147173) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (147183) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;32mI (148453) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (149483) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (149483) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (149493) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (149493) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;32mI (153063) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (153113) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (153113) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (153113) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (153123) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;32mI (157783) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (157943) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (157943) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (157953) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (157963) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;32mI (158023) ThingsBoard: Connected to ThingsBoard[0m
+[0;32mI (164023) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (164023) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (164023) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (164033) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (164043) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;32mI (165153) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (166273) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (166273) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (166283) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (166293) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;32mI (173543) ThingsBoard: Connected to ThingsBoard[0m
+[0;32mI (174673) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (174673) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (174673) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (174683) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (174693) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;32mI (181943) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (181943) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (181943) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (181953) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (181963) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;32mI (185323) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (185323) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (185323) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (185333) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (185343) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;31mE (195973) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;32mI (195973) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (195973) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (195983) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (195993) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;32mI (197513) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (197513) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (197513) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (197523) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (197533) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;32mI (206623) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (206623) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (206623) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (206633) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (206643) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;32mI (213183) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (213183) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (213183) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (213193) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (213203) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;32mI (217273) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (217273) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (217273) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (217283) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (217293) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;31mE (218803) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (218803) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (218813) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (218823) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;32mI (227923) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (227923) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (227923) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (227933) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (227943) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;31mE (228843) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (228843) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (228843) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (228853) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (228863) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;31mE (234473) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;32mI (234473) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (234473) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (234483) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (234493) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;32mI (238573) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (238573) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (238573) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (238583) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (238593) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;31mE (239493) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;32mI (239493) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (239493) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (239503) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (239513) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;31mE (245143) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (245143) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (245143) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (245153) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (245163) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;31mE (254243) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;32mI (254243) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (254243) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (254253) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (254263) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;32mI (255163) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (255163) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;31mE (255163) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (255173) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (255183) ThingsBoard: Disconnected from ThingsBoard[0m
+[0;31mE (255773) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[0;32mI (255773) ThingsBoard: Connected to ThingsBoard[0m
+[0;31mE (255773) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (255783) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (255793) ThingsBoard: Disconnected from ThingsBoard[0m
