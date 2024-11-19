@@ -1,0 +1,24 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM4 instead...[0m
+[0;33m--- esp-idf-monitor 1.4.0 on \\.\COM4 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400dabf8: esp_mqtt_client_register_event at D:/Espressif/frameworks/esp-idf-v5.3.1/components/mqtt/esp-mqtt/mqtt_client.c:2220
+[0m
+[0;33m0x400d8048: mqtt_event_handler at E:/ESPIDF/HealthST/main/HealthST.c:65
+[0m
+[0;33m0x400d8048: mqtt_event_handler at E:/ESPIDF/HealthST/main/HealthST.c:65
+[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400dabf5: esp_mqtt_client_register_event at D:/Espressif/frameworks/esp-idf-v5.3.1/components/mqtt/esp-mqtt/mqtt_client.c:2220
+0x400d82b7: mqtt_init at E:/ESPIDF/HealthST/main/HealthST.c:81
+0x400d82d7: send_data_to_thingsboard at E:/ESPIDF/HealthST/main/HealthST.c:88
+0x400d839e: mqtt_send_task at E:/ESPIDF/HealthST/main/HealthST.c:155
+0x4008ae31: vPortTaskWrapper at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0m

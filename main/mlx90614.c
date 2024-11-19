@@ -23,7 +23,7 @@ esp_err_t mlx90614_read_temp_c(i2c_port_t i2c_num, float *temperature) {
     if (err != ESP_OK) return err;
 
     uint16_t raw = (data[1] << 8) | data[0];
-    *temperature = (raw * 0.02) - 273.15; // Chuyển đổi sang độ Celsius
+    *temperature = (raw * 0.02) - 273.15+1; // Chuyển đổi sang độ Celsius
     return ESP_OK;
 }
 
