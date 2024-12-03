@@ -1,0 +1,178 @@
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "esp_system.h"
+#include "driver/spi_master.h"
+#include "soc/gpio_struct.h"
+#include "driver/gpio.h"
+#include <string.h>
+#include "lora.h"
+#include "max30102.h"
+#include "mlx90614.h"
+#include "esp_log.h"
+#include <inttypes.h>  // Thêm thư viện để sử dụng PRIu32
+#include "ssd1306.h"
+#include "font8x8_basic.h"
+
+#define mac_address "EC:64:C9:86:DC:EC"
+
+
+#define I2C_PORT I2C_NUM_0
+
+
+#define LORA_FREQUENCY 433E6
+
+
+#define MLX90614_READ_DURATION 5000 
+#define MAX30102_READ_DURATION 30000 
+
+static const char *TAG = "SENSOR_TASK";
+
+void i2C_init() {
+    int i2c_master_port = I2C_PORT;
+    i2c_config_t conf;
+    conf.mode = I2C_MODE_MASTER;
+    conf.sda_io_num = 21;  
+    conf.sda_pullup_en = GPIO_PULLUP_ENABLE;
+    conf.scl_io_num = 22;  
+    conf.scl_pullup_en = GPIO_PULLUP_ENABLE;
+    conf.master.clk_speed = 100000;  
+    i2c_param_config(i2c_master_port, &conf);
+    i2c_driver_install(i2c_master_port, conf.mode, 0, 0, 0);
+}
+
+
+void read_mlx90614_10s(float *temperature_c) {
+    uint32_t start_time = xTaskGetTickCount();
+    uint32_t current_time;
+
+    ESP_LOGI(TAG, "oke");
+
+    while ((current_time = xTaskGetTickCount()) - start_time < pdMS_TO_TICKS(MLX90614_READ_DURATION)) {
+        if (mlx90614_read_temp_c(I2C_PORT, temperature_c) == ESP_OK) {
+            ESP_LOGI(TAG, "Temperature (C): %.2f", *temperature_c);
+        } else {
+            ESP_LOGE(TAG, "Fail read");
+        }
+    }
+}
+
+
+float read_max30102_20s(float *spo2) {
+    uint32_t start_time = xTaskGetTickCount();
+    uint32_t current_time;
+    uint32_t ir_data = 0;
+    uint32_t red_data = 0;
+    float max_heart_rate = 0.0;
+    while ((current_time = xTaskGetTickCount()) - start_time < pdMS_TO_TICKS(MAX30102_READ_DURATION)) {
+        if (max30102_read_data(I2C_PORT, &ir_data, &red_data) == ESP_OK) {
+            float heart_rate = max30102_calculate_heart_rate(ir_data);
+                if (heart_rate > max_heart_rate) {
+                    max_heart_rate = heart_rate;
+                }
+                *spo2 = max30102_calculate_spo2(ir_data, red_data);
+            ESP_LOGI(TAG, "Heart Rate: %.2f bpm, SpO2: %.2f%%", heart_rate, *spo2);
+        }
+    }
+
+    return max_heart_rate;  
+}
+
+
+void send_lora_data(float temperature, float heart_rate, float spo2) {
+    char buf[100];
+    
+    int len = snprintf(buf, sizeof(buf), "MAC: %s, Temp: %.2f, HR: %.2f, SpO2: %.2f", mac_address, temperature, heart_rate, spo2);
+
+
+    lora_send_packet((uint8_t *)buf, len);
+    ESP_LOGI(TAG, "Sent: %s", buf);
+}
+static inline void oled_config(SSD1306_t *m_led){
+    int center, top, bottom;
+    char lineChar[20];
+
+   
+    i2c_master_init(m_led, 16, 17, -1);
+
+    ssd1306_init(m_led, 128, 64);
+
+
+    top = 2;
+    center = 3;
+    bottom = 8;
+    ssd1306_clear_screen(m_led, false);
+}
+void oled_display_value(SSD1306_t *m_led, const char *prefix, float value, int line) {
+    char buffer[32];
+    snprintf(buffer, sizeof(buffer), "%s %.2f", prefix, value); 
+    ssd1306_display_text(m_led, line, buffer, strlen(buffer), false);
+}
+void oled_display_text(SSD1306_t *m_led, char * content, int line){
+    ssd1306_display_text(m_led, line, content, strlen(content), false);
+}
+void oled_clear_line(SSD1306_t *m_led, int line) {
+    ssd1306_display_text(m_led, line, "                ", 16, false);  
+}
+void sensor_task(void *pvParameters) {
+   SSD1306_t m_oled;
+oled_config(&m_oled);
+oled_display_text(&m_oled, "HR: __", 0);
+oled_display_text(&m_oled, "Temp: __", 2);
+oled_display_text(&m_oled, "Spo2: __", 4);
+oled_display_text(&m_oled, "Press touch!", 6);  
+float temperature_c = 0;
+float heart_rate = 0;
+float spo2 = 0;
+uint32_t ir_data = 0;
+uint32_t red_data = 0;
+bool flag = false;
+
+lora_init();
+lora_set_frequency(LORA_FREQUENCY);
+lora_set_tx_power(17);
+lora_set_spreading_factor(12);
+lora_set_bandwidth(125E3);
+lora_enable_crc();
+max30102_init(I2C_PORT);
+mlx90614_init(I2C_PORT);
+
+while (1) {
+    max30102_read_data(I2C_PORT, &ir_data, &red_data);
+    ESP_LOGI(TAG, "IR Data: %lu", ir_data);
+    if (ir_data > 100000) {  
+        ir_data = 0;
+        if (!flag) {  
+            oled_clear_line(&m_oled, 6);  
+            flag = true;
+        }
+        heart_rate = read_max30102_20s(&spo2);
+        read_mlx90614_10s(&temperature_c);
+        if(spo2 > 0 && temperature_c > 32 && heart_rate > 10) {
+        oled_display_value(&m_oled, "HR:", heart_rate, 0);       
+        oled_display_value(&m_oled, "Temp:", temperature_c, 2);  
+        oled_display_value(&m_oled, "SpO2:", spo2, 4);
+        
+        uint32_t start_time = xTaskGetTickCount();
+        while (xTaskGetTickCount() - start_time < 300) {
+                send_lora_data(temperature_c, heart_rate, spo2);
+            vTaskDelay(pdMS_TO_TICKS(600));
+        }
+        }
+    } else { 
+        if (flag) {  
+            ssd1306_clear_screen(&m_oled, false);
+            oled_display_text(&m_oled, "Press touch!", 6);
+            flag = false;
+        }
+        oled_display_text(&m_oled, "HR: __", 0);
+        oled_display_text(&m_oled, "Temp: __", 2);
+        oled_display_text(&m_oled, "SpO2: __", 4);
+        vTaskDelay(pdMS_TO_TICKS(100));
+        }   
+    }
+
+}
+void app_main(void) {
+    i2C_init();
+    xTaskCreate(sensor_task, "sensor_task", 4096, NULL, 5, NULL);
+}

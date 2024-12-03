@@ -19,15 +19,15 @@ static const uint16_t FIRCoeffs[12] = {172, 321, 579, 927, 1360, 1858, 2390, 291
 
 float heart_rate_buffer[120];
 int buffer_index = 0;
-bool buffer_full = false;
 
+bool buffer_full = false;
 
 #define FreqS 25
 #define BUFFER_SIZE (FreqS * 4)
 #define MA4_SIZE 4
-const uint8_t uch_spo2_table[184] = {95, 95, 95, 96, 96, 96, 97, 97, 97, 97, 97, 98, 98, 98, 98, 98, 99, 99, 99, 99, 
-                                      99, 99, 99, 99, 96, 98, 100, 96, 100, 97, 100, 96, 98, 98, 100, 100, 96, 98, 100, 97, 
-                                      98, 96, 95, 98, 99, 99, 99, 99, 99, 99, 99, 99, 98, 98, 98, 98, 98, 98, 97, 97, 
+const uint8_t uch_spo2_table[184] = {96, 95, 96, 96, 96, 96, 97, 97, 97, 97, 97, 96, 98, 96, 98, 98, 98, 98, 97, 97, 
+                                      97, 97, 97, 97, 96, 98, 97, 96, 97, 97, 96, 96, 98, 98, 97, 96, 96, 98, 97, 97, 
+                                      98, 96, 95, 98, 98, 98, 96, 98, 96, 98, 97, 98, 98, 98, 98, 98, 98, 98, 97, 97, 
                                       97, 97, 96, 96, 96, 96, 95, 95, 95, 94, 94, 94, 93, 93, 93, 92, 92, 92, 91, 91, 
                                       90, 90, 89, 89, 89, 88, 88, 87, 87, 86, 86, 85, 85, 84, 84, 83, 82, 82, 81, 81, 
                                       80, 80, 79, 78, 78, 77, 76, 76, 75, 74, 74, 73, 72, 72, 71, 70, 69, 69, 68, 67, 
@@ -129,24 +129,20 @@ bool checkForBeat(int32_t sample) {
 }
 
 float max30102_calculate_heart_rate(uint32_t ir_data) {
-    if (ir_data < 4000) return 0;
+    if (ir_data < 1000000) return 0;
     else {
     static uint32_t lastBeatTime = 0;
     static float beatsPerMinute = 0;
     
-    // Apply low-pass FIR filter to the IR data
     int16_t filteredData = lowPassFIRFilter((int16_t)ir_data);
 
-    // Check for beat
     if (checkForBeat(filteredData)) {
         uint32_t currentTime = xTaskGetTickCount() * portTICK_PERIOD_MS;                                                                                                                                 
         
         uint32_t timeDifference = currentTime - lastBeatTime;
         lastBeatTime = currentTime;
-        if (timeDifference > 300) {
+        if (timeDifference > 300 ) {
             beatsPerMinute = 60000.0f / (float)timeDifference;
-
-            // Update heart rate buffer
             heart_rate_buffer[buffer_index] = beatsPerMinute;
             buffer_index = (buffer_index + 1) % 120;
             if (buffer_index == 0) {
@@ -183,8 +179,6 @@ float max30102_calculate_spo2(uint32_t ir_data, uint32_t red_data) {
 
     return (float)spo2;
 }
-
-// Function to average DC estimator
 int16_t averageDCEstimator(int32_t *p, uint16_t x) {
     *p += (((long)x << 15) - *p) >> 4;
     return (*p >> 15);

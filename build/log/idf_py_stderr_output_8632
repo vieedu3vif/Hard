@@ -1,0 +1,32 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM5 instead...[0m
+[0;33m--- esp-idf-monitor 1.4.0 on \\.\COM5 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d97af: task_wdt_timeout_handling at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c:434
+0x400d9b74: task_wdt_isr at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c:507
+0x40083071: _xt_lowint1 at D:/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x400eb0e7: averageDCEstimator at E:/ESPIDF/HealthST/main/max30102.c:187
+0x400d6c19: checkForBeat at E:/ESPIDF/HealthST/main/max30102.c:96
+0x400d6d4e: max30102_calculate_heart_rate at E:/ESPIDF/HealthST/main/max30102.c:141
+0x400d66a7: sensor_task at E:/ESPIDF/HealthST/main/HealthST.c:106
+0x4008818d: vPortTaskWrapper at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x400d97af: task_wdt_timeout_handling at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c:434
+0x400d9b74: task_wdt_isr at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c:507
+0x40083071: _xt_lowint1 at D:/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x400eb610: __divsf3 at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/gcc/libgcc/config/xtensa/ieee754-sf.S:926
+0x400d6bd1: max30102_calculate_spo2 at E:/ESPIDF/HealthST/main/max30102.c:175
+0x400d66c6: sensor_task at E:/ESPIDF/HealthST/main/HealthST.c:108
+0x4008818d: vPortTaskWrapper at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x400d97af: task_wdt_timeout_handling at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c:434
+0x400d9b74: task_wdt_isr at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c:507
+0x40083071: _xt_lowint1 at D:/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x400d6cf9: lowPassFIRFilter at E:/ESPIDF/HealthST/main/max30102.c:197
+0x400d6d4b: max30102_calculate_heart_rate at E:/ESPIDF/HealthST/main/max30102.c:138
+0x400d66a7: sensor_task at E:/ESPIDF/HealthST/main/HealthST.c:106
+0x4008818d: vPortTaskWrapper at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0m
