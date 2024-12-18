@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "HealthST",
-    "project_version":    "d4cc7c9-dirty",
+    "project_version":    "4f41f65-dirty",
     "project_path":       "E:/ESPIDF/HealthST",
     "idf_path":           "D:/Espressif/frameworks/esp-idf-v5.3.1",
     "build_dir":          "E:/ESPIDF/HealthST/build",
