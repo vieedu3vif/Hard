@@ -12,6 +12,7 @@ At the Node:
 - Temperature sensor MLX90614
 - Heart rate and SpO2 MAX30102
 - Module LoRa SX1278 Ra02
+- OLED SSD1306
 
 At the Gateway:
 - MCU ESP32
