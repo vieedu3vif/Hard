@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "431187477429",
+    "project_id": "healthst-64a0d",
+    "storage_bucket": "healthst-64a0d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:431187477429:android:0980700e1be6c3f1d10ffc",
+        "android_client_info": {
+          "package_name": "com.healthst"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC020EbXSuvGEbMDFn3Y7PtSk7QfywN9dA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
